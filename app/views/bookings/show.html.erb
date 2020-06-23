@@ -1,23 +1,33 @@
-<div class="container">
-  <h2 class="">Devis Estimatif</h2>
-  <ul class="">
-    <li class="">cout d'achat</li>
-     <li class="">cout de la main d'oeuvre </li>
-     <li class="">cout de livraison</li>
-  </ul>
-  <ul class="">
- <%# 1 calcule cout achat du produit %>
-     <li class=""><%= @booking.product.price_per_square_meter * @booking.surface_area %></li>
- <%# 2 calcule cout de la main d'oeuvre %>
-     <li class=""><%=@booking.labor%></li>
-     <li class="">50€</li>
-  </ul>
-</div>
-<div class="container">
-<p class="">Cout total</p>
-<p class=""><%= @booking.total%> €  </p>
-<%=link_to "Prise de rendez-vous", bookings_path, class: "btn btn-flat ml-3" %>
-</div>
-<div class="container">
-
+<div class="d-flex flex-row justify-content-center">
+  <div class="d-flex flex-column">
+    <div class="border-light rounded bg-white text-black p-3 m-3">
+      <h2 class="text-justify text-center">Devis Estimatif</h2>
+      <div class="d-flex flex-grow-1 flex-row m-3">
+      <ul class="list-group list-group-flush">
+         <li class="list-group-item">Cout d'achat:</li>
+         <li class="list-group-item">Cout de la main d'oeuvre: </li>
+         <li class="list-group-item">Cout de livraison:</li>
+      </ul>
+      <ul class="list-group list-group-flush">
+      <%# 1 calcule cout achat du produit %>
+         <li class="list-group-item"><%= (@booking.product.price_per_square_meter * @booking.surface_area).round(2) %>€</li>
+      <%# 2 calcule cout de la main d'oeuvre %>
+         <li class="list-group-item"><%=@booking.labor.round(2)%>€</li>
+         <li class="list-group-item">50€</li>
+      </ul>
+      </div>
+    </div>
+    <div class=" border-light rounded bg-white text-black p-3 m-3 ">
+        <p class="">Type de produit: <%=@booking.product.product_type%></p>
+        <p class="">Descriptif: <%=@booking.product.description%></p>
+        <p class="">Prix du produit au mètre carré:  <%=@booking.product.price_per_square_meter%>€</p>
+      </ul>
+    </div>
+  </div>
+  <div class="align-self-start text-justify text-center border-light rounded bg-white text-black p-3 m-3">
+    <h2 class="text-justify text-center">Cout total</h2>
+    <p class="text-justify text-center"><%= @booking.total.round(2)%> €  </p>
+    <%=link_to "Prise de rendez-vous", bookings_path, class: "btn btn-outline-primary m-3 " %>
+  </div>
+  
 </div>

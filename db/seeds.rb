@@ -22,11 +22,11 @@ carrelage1= Product.create!(product_type: "carrelage", price_per_square_meter: 2
 parquet1= Product.create!(product_type: "parquet", price_per_square_meter: 60, description: "parquet contrecolle", user: sami)
 
 
-# carrelage = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRug0E23EZSyvnwTQVY17_bF0GQhEKMmrObU373k6q3LTh6aj5xPDP7DmefPORa2zDlYdTqM_xMUc&usqp=CAc')
-# parquet = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc')
+#  carrelage = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRug0E23EZSyvnwTQVY17_bF0GQhEKMmrObU373k6q3LTh6aj5xPDP7DmefPORa2zDlYdTqM_xMUc&usqp=CAc')
+#  parquet = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc')
 
-# carrelage1.photo.attach(io: carrelage, filedescription: 'parquet.png', content_type: 'image/png' )
-# parquet1.photo.attach(io: parquet, filedescription: 'parquet.png', content_type: 'image/png')
+#  carrelage1.photo.attach(io: carrelage, filedescription: 'parquet.png', content_type: 'image/png' )
+#  parquet1.photo.attach(io: parquet, filedescription: 'parquet.png', content_type: 'image/png')
 
 
 #booking
