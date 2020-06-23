@@ -1,5 +1,7 @@
-class BookingController < ApplicationController
-  def index
+class BookingsController < ApplicationController
+
+  def new
+
   end
 
   def create
