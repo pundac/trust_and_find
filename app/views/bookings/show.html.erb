@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="">Devis Estimatif</h2>
+  <ul class="">
+    <li class="">cout d'achat</li>
+     <li class="">cout de la main d'oeuvre </li>
+     <li class="">cout de livraison</li>
+  </ul>
+  <ul class="">
+ <%# 1 calcule cout achat du produit %>
+     <li class=""><%= @booking.product.price_per_square_meter * @booking.surface_area %></li>
+ <%# 2 calcule cout de la main d'oeuvre %>
+     <li class=""><%=@booking.labor%></li>
+     <li class="">50€</li>
+  </ul>
+</div>
+<div class="container">
+<p class="">Cout total</p>
+<p class=""><%= @booking.total%> €  </p>
+<%=link_to "Prise de rendez-vous", bookings_path, class: "btn btn-flat ml-3" %>
+</div>
+<div class="container">
+
+</div>
