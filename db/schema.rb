@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_06_23_111509) do
     t.bigint "user_id", null: false
     t.bigint "product_id", null: false
     t.datetime "date"
-    t.string "product_type"
+    t.string "floor"
     t.float "surface"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
