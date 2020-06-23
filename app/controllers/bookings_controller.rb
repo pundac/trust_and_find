@@ -1,4 +1,8 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
+
+  def new
+
+  end
 
   def create
     @booking = Booking.new(booking_params)
