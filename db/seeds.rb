@@ -3,8 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ description: 'Star Wars' }, { description: 'Lord of the Rings' }])
+#   Character.create(description: 'Luke', movie: movies.first)
 
 Booking.destroy_all
 Product.destroy_all
@@ -18,18 +18,18 @@ sami= User.create!(name:'Evil to the end', address: '666 High Way to Hell', emai
 
 #product
 
-carrelage1= Product.create!(product_type: "carrelage", price: 23.88, name: "carrelage effet zellige", user: sami)
-parquet1= Product.create!(product_type: "parquet", price: 60, name: "parquet contrecolle", user: sami)
+carrelage1= Product.create!(product_type: "carrelage", price_per_square_meter: 23.88, description: "carrelage effet zellige", user: sami)
+parquet1= Product.create!(product_type: "parquet", price_per_square_meter: 60, description: "parquet contrecolle", user: sami)
 
 
 # carrelage = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRug0E23EZSyvnwTQVY17_bF0GQhEKMmrObU373k6q3LTh6aj5xPDP7DmefPORa2zDlYdTqM_xMUc&usqp=CAc')
 # parquet = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc')
 
-# carrelage1.photo.attach(io: carrelage, filename: 'parquet.png', content_type: 'image/png' )
-# parquet1.photo.attach(io: parquet, filename: 'parquet.png', content_type: 'image/png')
+# carrelage1.photo.attach(io: carrelage, filedescription: 'parquet.png', content_type: 'image/png' )
+# parquet1.photo.attach(io: parquet, filedescription: 'parquet.png', content_type: 'image/png')
 
 
 #booking
 
-booking1= Booking.create!(user: gaspar, product: carrelage1, date: "Fri, 03 Jul 2020 14:59:00 UTC +00:00", product_type: "parquet", surface: 40)
-booking2= Booking.create!(user: gaspar, product: parquet1, date: "Mon, 10 Dec 2020 09:00:00 UTC +00:00", product_type: "parquet", surface: 20)
+booking1= Booking.create!(user: gaspar, product: carrelage1, starts_at: "Fri, 03 Jul 2020 09:00:00 UTC +00:00", ends_at: "Fri, 17 Jul 2020 19:00:00 UTC +00:00" , floor_type: "parquet", surface_area: 40)
+booking2= Booking.create!(user: gaspar, product: parquet1, starts_at: "Mon, 07 Sep 2020 09:00:00 UTC +00:00", ends_at: 'Fri, 18 Sep 2020 19:00:00 UTC +00:00', floor_type: "parquet", surface_area: 20)

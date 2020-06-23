@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2020_06_23_133218) do
   end
 
   create_table "products", force: :cascade do |t|
-
     t.string "product_type"
     t.float "price_per_square_meter"
     t.string "description"
