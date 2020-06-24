@@ -20,6 +20,6 @@ class BookingsController < ApplicationController
   def update
   end
 
-  def patch
+  def edit
   end
 end
