@@ -1,20 +1,20 @@
 <div class="card-deck d-flex justify-content-between">
   <div class="card card-floor">
-    <%= link_to new_booking_path(surface_area: params[:surface_area],product: params[:product], new_product: 'carrelage') do  %>
+    <%= link_to booking_path(@booking, surface_area: params[:surface_area],product: params[:product], new_product: 'carrelage') do  %>
       <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3-xxRrjmHG-R_mzJDld-8ExnYx9GVx66YTg&usqp=CAU", alt: "Le Wagon", width: 200 %>
       <h2>Carrelage 23€/m²</h2>
       <p>Le carrelage repondra parfaitement à vos besoins</p>
     <% end %>
   </div>
   <div class="card card-floor">
-    <%= link_to new_booking_path(surface_area: params[:surface_area],product: params[:product], new_product: 'parquet massif') do  %>
+    <%= link_to booking_path(@booking, surface_area: params[:surface_area],product: params[:product], new_product: 'parquet massif')  do  %>
       <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc", alt: "Le Wagon", width: 200 %>
       <h2>Parquet massif 90€/m²</h2>
       <p>Parquet chaleureux</p>
     <% end %>
   </div>
   <div class="card card-floor">
-    <%= link_to new_booking_path(surface_area: params[:surface_area],product: params[:product], new_product: 'parquet flottant') do  %>
+    <%= link_to booking_path(@booking, surface_area: params[:surface_area],product: params[:product], new_product: 'parquet flottant') do  %>
       <%= image_tag "https://www.plancheravenue.com/wp-content/uploads/2019/11/renover-parquet-stratifie-1030x687.jpg", alt: "Le Wagon", width: 200 %>
       <h2>Parquet flottant 20€/m²</h2>
       <p>Sans bruit et agréable</p>
