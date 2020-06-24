@@ -1,0 +1,29 @@
+.button {
+  color: white;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 3px white;
+  transition: all 0.3s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    text-decoration: none;
+  }
+}
+.button-invers {
+  color: black;
+  padding: 10px 15px;
+  background-color: rgba( 0, 0, 0, 0);
+  border: solid 3px black;
+  transition: all 0.3s;
+  &:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    text-decoration: none;
+  }
+}
+#card-devis {
+  display: flex;
+  width: 600px;
+  height: 250px;
+}
