@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-4">
   <% if params.dig(:surface_area).blank? %>
     <h1>Quelle est la surface à renover?</h1>
     <%= simple_form_for :bookings, url:     new_booking_path,
@@ -8,14 +8,32 @@
       <%= f.submit "Valider", class: 'btn btn-primary' %>
     <% end %>
   <% else %>
-    <!--
     Etape 2
-    <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'toto') do %>
-      choix 1
-    <% end %>
-    <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'toto') do  %>
-      choix 2
-    <% end %>
-    -->
+  <div class="card-deck">
+    <div class="card-product">
+      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'Carrelage') do %>
+        <%= image_tag "https://i.pinimg.com/originals/88/ff/6e/88ff6e93b081465f9ec21d6bd3f11305.jpg", alt: "Le Wagon", width: 200 %>
+        Carrelage
+      <% end %>
+    </div>
+    <div class="card">
+      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'planché massif') do  %>
+        <%= image_tag "https://www.parqueteriefrancaise.fr/modules/ph_simpleblog/featured/36-featured.jpg", alt: "Le Wagon", width: 200 %>
+        planché massif
+      <% end %>
+    </div>
+    <div class="card">
+      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'parquet stratifé') do  %>
+        <%= image_tag "https://static.comment-economiser.fr/documents/images/2018/02/gondolement-lames-guide-comment-nettoyer-sol-stratifie.jpg", alt: "Le Wagon", width: 200 %>
+        parquet stratifé
+      <% end %>
+    </div>
+    <div class="card">
+      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'brut') do  %>
+        <%= image_tag "https://media1.forumconstruire.com/photo/large/140179.jpg", alt: "Le Wagon", width: 200 %>
+        brut
+      <% end %>
+    </div>
+  </div>
   <% end %>
 </div>
