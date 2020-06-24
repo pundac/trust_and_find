@@ -51,7 +51,9 @@ ActiveRecord::Schema.define(version: 2020_06_24_102706) do
 
   create_table "products", force: :cascade do |t|
     t.string "product_type"
+
     t.float "price_per_square_meter"
+
     t.string "description"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
