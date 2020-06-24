@@ -3,9 +3,8 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
+#   movies = Movie.create([{ description: 'Star Wars' }, { description: 'Lord of the Rings' }])
+#   Character.create(description: 'Luke', movie: movies.first)
 
 Booking.destroy_all
 Product.destroy_all
@@ -19,28 +18,18 @@ sami= User.create!(name:'Evil to the end', address: '666 High Way to Hell', emai
 
 #product
 
-carrelage1= Product.new(product_type: "carrelage", price_per_square_meter: 23.88, description: "carrelage effet zellige", user: sami)
-parquet1= Product.new(product_type: "parquet", price_per_square_meter: 60, description: "parquet contrecolle", user: sami)
+carrelage1= Product.create!(product_type: "carrelage", price_per_square_meter: 23.88, description: "carrelage effet zellige", user: sami)
+parquet1= Product.create!(product_type: "parquet", price_per_square_meter: 60, description: "parquet contrecolle", user: sami)
 
 
 #  carrelage = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRug0E23EZSyvnwTQVY17_bF0GQhEKMmrObU373k6q3LTh6aj5xPDP7DmefPORa2zDlYdTqM_xMUc&usqp=CAc')
 #  parquet = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc')
 
-#  carrelage1.photo.attach(io: carrelage, filename: 'carrelage.png', content_type: 'image/png' )
-#  parquet1.photo.attach(io: parquet, filename: 'parquet.png', content_type: 'image/png')
+#  carrelage1.photo.attach(io: carrelage, filedescription: 'parquet.png', content_type: 'image/png' )
+#  parquet1.photo.attach(io: parquet, filedescription: 'parquet.png', content_type: 'image/png')
 
- carrelage1.save
- parquet1.save
+
 #booking
 
-booking1= Booking.new(user: gaspar, product: carrelage1, starts_at: "Fri, 03 Jul 2020 09:00:00 UTC +00:00", ends_at: "Fri, 17 Jul 2020 19:00:00 UTC +00:00" , floor_type: "parquet massif", surface_area: 40)
-booking2= Booking.new(user: gaspar, product: parquet1, starts_at: "Mon, 07 Sep 2020 09:00:00 UTC +00:00", ends_at: 'Fri, 18 Sep 2020 19:00:00 UTC +00:00', floor_type: "carrelage", surface_area: 20)
-
-# vieux_carrelage = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRug0E23EZSyvnwTQVY17_bF0GQhEKMmrObU373k6q3LTh6aj5xPDP7DmefPORa2zDlYdTqM_xMUc&usqp=CAc')
-# vieux_parquet = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc')
-
-# booking1.photo.attach(io: vieux_carrelage, filename: 'view_parquet_massif.png', content_type: 'image/png' )
-# booking2.photo.attach(io: vieux_parquet, filename: 'view_carrelage.png', content_type: 'image/png')
-
-booking1.save
-booking2.save
+booking1= Booking.create!(user: gaspar, product: carrelage1, starts_at: "Fri, 03 Jul 2020 09:00:00 UTC +00:00", ends_at: "Fri, 17 Jul 2020 19:00:00 UTC +00:00" , floor_type: "parquet massif", surface_area: 40)
+booking2= Booking.create!(user: gaspar, product: parquet1, starts_at: "Mon, 07 Sep 2020 09:00:00 UTC +00:00", ends_at: 'Fri, 18 Sep 2020 19:00:00 UTC +00:00', floor_type: "carrelage", surface_area: 20)

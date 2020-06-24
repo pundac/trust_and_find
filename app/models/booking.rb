@@ -6,7 +6,7 @@ class Booking < ApplicationRecord
   def labor
     if self.product.product_type == 'carrelage'
       return 35*self.surface_area
-    elsif self.product.product_type == 'Parquet massif'
+    elsif self.product.product_type == 'parquet massif'
       return 40*self.surface_area
     else
       return 30*self.surface_area
