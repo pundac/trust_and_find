@@ -33,3 +33,6 @@
     color: #007FFF;
   }
 }
+.fix-footer {
+  min-height: calc(100vh - 160px)
+}
