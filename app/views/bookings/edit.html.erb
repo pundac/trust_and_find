@@ -1,1 +1,14 @@
-<%= render 'shared/calendar' %>
+
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Selectionez vos dates</h2>
+
+    <%= simple_form_for :search, method: "get" do |f| %>
+      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= t.input :starts_at, input_html: { id: "range_start" } %>
+      <%= t.input :ends_at, input_html: { id: "range_end" } %>
+      <%= f.button :submit, "Valider", class: "button-invers m-2 " %>
+    <% end %>
+  </div>
+</div>

@@ -14,7 +14,13 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = Booking.new
+    raise
+    params ?
+    @booking.surface_area = ????
+    # @product => retrouver le product grace aux params
+
+    
   end
 
   def update
