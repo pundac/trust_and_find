@@ -1,7 +1,12 @@
-.container {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
+.card-floor img{
+  width: 100%;
+  height: 200px;
+  background-position: cover;
+}
+
+.card-floor{
+  overflow: hidden !important;
+  padding: 0 !important;
 }
 
 .cards {
@@ -45,4 +50,3 @@
 #card-desc {
   width: 95%;
 }
->>>>>>> master
