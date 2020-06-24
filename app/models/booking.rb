@@ -1,6 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :product
+  has_one_attached :photo
 
   def labor
     if self.product.product_type == 'carrelage'
