@@ -12,4 +12,14 @@ class BookingsController < ApplicationController
       render 'new'
     end
   end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+  end
+
+  def patch
+  end
 end
