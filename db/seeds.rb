@@ -18,6 +18,8 @@ sami= User.create!(name:'Evil to the end', address: '666 High Way to Hell', emai
 
 #product
 
+carrelage1 = Product.create!(product_type: "carrelage", price_per_square_meter: 23, description: "carrelage effet zellige", user: sami)
+parquet1 = Product.create!(product_type: "parquet massif", price_per_square_meter: 90, description: "parquet contrecolle", user: sami)
 carrelage1= Product.create!(product_type: "carrelage", price_per_square_meter: 23, description: "carrelage effet zellige", user: sami)
 parquet1= Product.create!(product_type: "parquet massif", price_per_square_meter: 90, description: "parquet contrecolle", user: sami)
 parquet2 = Product.create!(product_type: "parquet flottant", price_per_square_meter: 20, description: "Beau parquet glissant", user: sami)
