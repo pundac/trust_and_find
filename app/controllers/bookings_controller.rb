@@ -15,14 +15,22 @@ class BookingsController < ApplicationController
   end
 
   def confirmation
-    @booking = Booking.new
-    @booking.surface_area =  params[:surface_area]
-    @booking.floor_type =  params[:product]
-    # @booking.product.product_type = params[:product][:new_product]
-    # @booking.product.price_per_square_meter = params[:product][:price_per_square_meter]
+    build_booking_with_params
+
   end 
 
   def intervention_schedueles
+    build_booking_with_params
+  end
+
+  private
+
+  def build_booking_with_params
+    @booking = Booking.new
+    @booking.surface_area =  params[:surface_area]
+    @booking.floor_type =  params[:product]
+    @product =Product.find_by(product_type: params[:new_product])
+    @booking.product = @product
   end
   
 end
