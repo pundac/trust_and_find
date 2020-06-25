@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
     @step1 = params.dig(:surface_area).blank?
@@ -11,7 +10,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     if @booking.save
       redirect_to booking_path(@booking)
-      raise
     else
       render 'new'
     end
@@ -19,7 +17,10 @@ class BookingsController < ApplicationController
 
   def confirmation
     build_booking_with_params
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2d249aedbf8227d48a81c47109bf0df6d918276
   end
 
   def intervention_schedueles
@@ -30,10 +31,13 @@ class BookingsController < ApplicationController
 
   def build_booking_with_params
     @booking = Booking.new
-    @booking.surface_area =  params[:surface_area]
-    @booking.floor_type =  params[:product]
-    @product =Product.find_by(product_type: params[:new_product])
+    @booking.surface_area = params[:surface_area]
+    @booking.floor_type = params[:product]
+    @product = Product.find_by(product_type: params[:new_product])
     @booking.product = @product
   end
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2d249aedbf8227d48a81c47109bf0df6d918276
 end
