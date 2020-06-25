@@ -2,6 +2,9 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @step1 = params.dig(:surface_area).blank?
+    @step2 = !@step1 && params.dig(:product).blank?
+    @step3 = !params.dig(:product).blank?
   end
 
   def create
@@ -17,7 +20,7 @@ class BookingsController < ApplicationController
   def confirmation
     build_booking_with_params
 
-  end 
+  end
 
   def intervention_schedueles
     build_booking_with_params
@@ -32,5 +35,5 @@ class BookingsController < ApplicationController
     @product =Product.find_by(product_type: params[:new_product])
     @booking.product = @product
   end
-  
+
 end

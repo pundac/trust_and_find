@@ -1,17 +1,16 @@
-<div class="container mt-4">
-  <% if params.dig(:surface_area).blank? %>
-    <h1>Quelle est la surface à renover?</h1>
-    <%= simple_form_for :bookings, url:     new_booking_path,
-                                   method: :get do |f| %>
-      <%= f.input :surface_area, label: false,
-                                 input_html: { name: 'surface_area'} %>
-      <%= f.submit "Valider", class: 'btn btn-primary' %>
-    <% end %>
-  <% elsif !params.dig(:product).blank? %>
+<div class="container-products mt-4 fix-footer">
+  <% if @step1 %>
+    <%= render 'shared/booking-step1' %>
+  <% end %>
+  <% if @step2 %>
+    <%= render 'shared/booking-step1' %>
+    <%= render 'shared/booking-step2' %>
+  <% end %>
+  <% if @step3 %>
     <div>
+      <%= render 'shared/booking-step1' %>
+      <%= render 'shared/booking-step2' %>
       <%= render 'shared/booking-step3' %>
     </div>
-  <% else %>
-    <%= render 'shared/booking-step2' %>
   <% end %>
 </div>
