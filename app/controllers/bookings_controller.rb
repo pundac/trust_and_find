@@ -8,18 +8,29 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     if @booking.save
       redirect_to booking_path(@booking)
+      raise
     else
       render 'new'
     end
   end
 
-  def show
-    @booking = Booking.find(params[:id])
+  def confirmation
+    build_booking_with_params
+
+  end 
+
+  def intervention_schedueles
+    build_booking_with_params
   end
 
-  def update
-  end
+  private
 
-  def edit
+  def build_booking_with_params
+    @booking = Booking.new
+    @booking.surface_area =  params[:surface_area]
+    @booking.floor_type =  params[:product]
+    @product =Product.find_by(product_type: params[:new_product])
+    @booking.product = @product
   end
+  
 end
