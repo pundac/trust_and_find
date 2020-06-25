@@ -17,10 +17,6 @@ class BookingsController < ApplicationController
 
   def confirmation
     build_booking_with_params
-<<<<<<< HEAD
-
-=======
->>>>>>> a2d249aedbf8227d48a81c47109bf0df6d918276
   end
 
   def intervention_schedueles
@@ -36,8 +32,4 @@ class BookingsController < ApplicationController
     @product = Product.find_by(product_type: params[:new_product])
     @booking.product = @product
   end
-<<<<<<< HEAD
-
-=======
->>>>>>> a2d249aedbf8227d48a81c47109bf0df6d918276
 end
