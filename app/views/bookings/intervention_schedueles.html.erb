@@ -9,6 +9,7 @@
     <h2>Selectionner vos dates</h2>
 
     <%= simple_form_for :search, method: "get" do |f| %>
+
       <%= f.input :starts_at, input_html: { id: "range_start" }%>
       <%= f.input :ends_at, input_html: { id: "range_end" }%>
       <%= f.button :submit, "Valider", class: "button-invers " %>

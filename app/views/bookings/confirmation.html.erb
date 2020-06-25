@@ -20,10 +20,10 @@
 
     <div class=" d-flex flex-row border-light shadow justify-content-center rounded bg-white text-black p-3 m-3 transi">
         <div>
-          <img src="<%=@booking.image_product%>" class="img-fluid rounded" alt="your floor" >
+          <img src="<%=@booking.image_product%>" class="img-card rounded" alt="your floor" >
         </div>
         <div class="">
-          <p class="">Type de produit: <%=@booking.product.product_type%></p>
+          <p class="text-justify text-center m-3">Type de produit: <%=@booking.product.product_type%></p>
           <p class="text-justify text-center m-3">Descriptif: <%=@booking.product.description%></p>
           <p class="text-justify text-center m-3">Prix du produit au mètre carré:  <%=@booking.product.price_per_square_meter%>€</p>
         </div>
@@ -32,7 +32,7 @@
   <div class="align-self-start text-justify text-center shadow border-light rounded bg-white text-black p-3 m-3 transi">
     <h2 class="text-justify text-center">Cout total</h2>
     <p class="text-justify text-center"><%= @booking.total.round(2)%> € </p>
-     <%=link_to "Prise de rendez-vous",intervention_schedueles_bookings_path, class: "button-invers m-2 " %> 
+     <%=link_to "Prise de rendez-vous",intervention_schedueles_bookings_path, class: "button-invers m-2 " %>
   </div>
 
 </div>
