@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @step1 = params.dig(:surface_area).blank?
+    @step2 = !@step1 && params.dig(:product).blank?
+    @step3 = !params.dig(:product).blank?
   end
 
   def create

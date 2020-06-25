@@ -1,15 +1,22 @@
-<div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+
+<div class="background_calendar" style="
+    background-image: url(https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;">
+   <div class="d-flex align-self-start justify-content-center fix-footer ">
+
+  <div class="form-wrapper text-justify text-center  text-black p-3 m-3 transi">
     <h2>Selectionner vos dates</h2>
 
     <%= simple_form_for [@product, @booking] do |f| %>
-      <%= f.input :starts_at, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <%= f.input :ends_at, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <%= f.input :starts_at, required: true, input_html: { id: "range_start" } %>
+      <%= f.input :ends_at, required: true, input_html: { id: "range_end" } %>
       <%= f.input :surface_area, as: :hidden %>
       <%= f.input :product_id, as: :hidden %>
       <%= f.input :floor_type, as: :hidden %>
       <%= f.submit :valider, class: "button-invers" %>
     <% end %>
       <%#= link_to 'Valider', product_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product], starts_at: params[:starts_at], ends_at: params[:ends_at]), class: "button-invers"%>
+  </div>
   </div>
 </div>

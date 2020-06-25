@@ -1,27 +1,49 @@
-<h1>Etape 2</h1>
-  <div class="card-deck d-flex justify-content-between">
-    <div class="card card-floor">
-      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'Carrelage') do %>
-        <%= image_tag "https://i.pinimg.com/originals/88/ff/6e/88ff6e93b081465f9ec21d6bd3f11305.jpg", alt: "Le Wagon", width: 200 %>
-        Carrelage
-      <% end %>
-    </div>
-    <div class="card card-floor">
-      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'planché massif') do  %>
-        <%= image_tag "https://www.parqueteriefrancaise.fr/modules/ph_simpleblog/featured/36-featured.jpg", alt: "Le Wagon", width: 200 %>
-        planché massif
-      <% end %>
-    </div>
-    <div class="card card-floor">
-      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'parquet stratifé') do  %>
-        <%= image_tag "https://static.comment-economiser.fr/documents/images/2018/02/gondolement-lames-guide-comment-nettoyer-sol-stratifie.jpg", alt: "Le Wagon", width: 200 %>
-        parquet stratifé
-      <% end %>
-    </div>
-    <div class="card card-floor">
-      <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'brut') do  %>
-        <%= image_tag "https://media1.forumconstruire.com/photo/large/140179.jpg", alt: "Le Wagon", width: 200 %>
-        brut
-      <% end %>
+<h1>Quel est le suport existant?</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-3">
+        <div class="card-floor transi <%= params[:product] == 'Carrelage' ? 'selected': '' %>">
+          <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'Carrelage', anchor:"step3") do %>
+            <%= image_tag "https://i.pinimg.com/originals/88/ff/6e/88ff6e93b081465f9ec21d6bd3f11305.jpg", alt: "Le Wagon", width: 200 %>
+            <h3>Carrelage : </h3>
+            <hr color= #dbd4d4>
+            <ul>
+              <li><p>tomettes</p></li>
+              <li><p>grès-cérame</p></li>
+              <li><p>carreaux de marbre ou de ciment.</p></li></ul>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card-floor transi <%= params[:product] == 'planché massif' ? 'selected': '' %>">
+          <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'planché massif', anchor:"step3") do  %>
+            <%= image_tag "https://www.parqueteriefrancaise.fr/modules/ph_simpleblog/featured/36-featured.jpg", alt: "Le Wagon", width: 200 %>
+            <h3>planché massif</h3>
+            <hr color= #dbd4d4>
+            <ul><li><p>Toutes essences de bois</p></li></ul>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card-floor transi <%= params[:product] == 'parquet stratifé' ? 'selected': '' %>">
+          <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'parquet stratifé', anchor:"step3") do  %>
+            <%= image_tag "https://static.comment-economiser.fr/documents/images/2018/02/gondolement-lames-guide-comment-nettoyer-sol-stratifie.jpg", alt: "Le Wagon", width: 200 %>
+            <h3>parquet stratifé</h3>
+            <hr color= #dbd4d4>
+              <ul><li><p>Tous types de parquet stratifié</p></li></ul>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="card-floor transi <%= params[:product] == 'brut' ? 'selected': '' %>">
+          <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'brut', anchor:"step3") do  %>
+            <%= image_tag "https://media1.forumconstruire.com/photo/large/140179.jpg", alt: "Le Wagon", width: 200 %>
+            <h3>brut</h3>
+            <hr color= #dbd4d4>
+              <ul><li><p>beton</p></li>
+                <li><p>plancher bois...</p></li></ul>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
