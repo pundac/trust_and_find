@@ -2,10 +2,14 @@
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <h2>Selectionner vos dates</h2>
 
-    <%= simple_form_for :search, method: "get" do |f| %>
-      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Valider", class: "button-invers" %>
+    <%= simple_form_for [@product, @booking] do |f| %>
+      <%= f.input :starts_at, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <%= f.input :ends_at, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <%= f.input :surface_area, as: :hidden %>
+      <%= f.input :product_id, as: :hidden %>
+      <%= f.input :floor_type, as: :hidden %>
+      <%= f.submit :valider, class: "button-invers" %>
     <% end %>
+      <%#= link_to 'Valider', product_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product], starts_at: params[:starts_at], ends_at: params[:ends_at]), class: "button-invers"%>
   </div>
 </div>

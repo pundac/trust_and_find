@@ -32,7 +32,7 @@
   <div class="align-self-start text-justify text-center shadow border-light rounded bg-white text-black p-3 m-3 transi">
     <h2 class="text-justify text-center">Cout total</h2>
     <p class="text-justify text-center"><%= @booking.total.round(2)%> € </p>
-     <%=link_to "Prise de rendez-vous",intervention_schedueles_bookings_path, class: "button-invers m-2 " %>
+     <%=link_to "Prise de rendez-vous",intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "button-invers m-2 " %>
   </div>
 
 </div>
