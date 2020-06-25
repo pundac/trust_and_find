@@ -1,11 +1,11 @@
-<div class="container mt-4">
+<div class="container mt-4 fix-footer">
   <% if params.dig(:surface_area).blank? %>
     <h1>Quelle est la surface à renover?</h1>
     <%= simple_form_for :bookings, url:     new_booking_path,
                                    method: :get do |f| %>
       <%= f.input :surface_area, label: false,
                                  input_html: { name: 'surface_area'} %>
-      <%= f.submit "Valider", class: 'btn btn-primary' %>
+      <%= f.submit "Valider", class: 'button-invers' %>
     <% end %>
   <% elsif !params.dig(:product).blank? %>
     <div>
