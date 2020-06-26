@@ -1,7 +1,11 @@
-<h1>Quelle est la surface à renover?</h1>
-<%= simple_form_for :bookings, url:     new_booking_path,
-                               method: :get do |f| %>
-  <%= f.input :surface_area, label: false,
-                             input_html: { name: 'surface_area', value: params[:surface_area]} %>
-  <%= f.submit "Valider", class: 'btn btn-primary' %>
-<% end %>
+<div class="container text-center">
+
+  <h1 class="text-center mb-4">Quelle est la surface à renover?</h1>
+  <%= simple_form_for :bookings, url:     new_booking_path,
+                                 method: :get do |f| %>
+    <%= f.input :surface_area, label: false,
+                               input_html: { name: 'surface_area', value: params[:surface_area]}, class: "mx-5" %>
+    <%= f.submit "Valider", class: 'button-invers mt-4' %>
+  <% end %>
+
+</div>
