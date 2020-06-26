@@ -17,7 +17,6 @@
   background-color: rgba( 0, 0, 0, 0);
   border: solid 3px black;
   transition: all 0.3s;
-
   &:hover {
     background-color: rgba(0, 0, 0, 1);
     color: white;
@@ -28,4 +27,7 @@
   display: flex;
   width: 600px;
   height: 250px;
+}
+.button-confirmation {
+  margin: 5%;
 }
