@@ -9,8 +9,8 @@
       <h2>Selectionner vos dates</h2>
 
       <%= simple_form_for [@product, @booking] do |f| %>
-        <%= f.input :starts_at, required: true, input_html: { id: "range_start" } %>
-        <%= f.input :ends_at, required: true, input_html: { id: "range_end" } %>
+        <%= f.input :starts_at,as: :string, required: true, input_html: { id: "range_start" } %>
+        <%= f.input :ends_at, as: :string, required: true, input_html: { id: "range_end" } %>
         <%= f.input :surface_area, as: :hidden %>
         <%= f.input :product_id, as: :hidden %>
         <%= f.input :floor_type, as: :hidden %>
