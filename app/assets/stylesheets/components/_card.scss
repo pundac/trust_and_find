@@ -19,16 +19,20 @@
     text-align: center;
     text-color: black;
   }
+  h4 {
+    text-weight: 900;
+  }
 
   a:hover{
     text-decoration: none;
   }
   hr {
-    background-color: dbd4d4;
+    background-color: #dbd4d4;
     opacity: 0,2;
   }
 }
 .card-step {
+  border: solid 1px #c0c0c0;
   text-align: center;
   font-family: 'Halant', serif;
   transition: all .2s ease-in-out;

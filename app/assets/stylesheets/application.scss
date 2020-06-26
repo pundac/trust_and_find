@@ -12,9 +12,11 @@
 @import "components/index";
 @import "pages/index";
 @import "components/footer";
+@import "components/card_show";
+
 
 body {
-  background-color: #dfe4ea;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 40%, rgba(196, 196, 196, 0.5));
 }
 
 @import "flatpickr/dist/flatpickr";
