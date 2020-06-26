@@ -22,7 +22,7 @@
     <h1>Votre recapitulatif</h1>
     <p>En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
-    <p>Votre rendez-vous est du: <strong><%=@booking.starts_at%></strong> au <strong><%=@booking.ends_at%></strong></p>
+    <p>Votre rendez-vous est du: <strong><%=(@booking.starts_at).strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%=(@booking.ends_at).strftime("%d/%m/%Y %H:%M")%></strong></p>
     <div class="total_pay">
       <h2>Cout total</h2>
       <p ><%= @booking.total.round(2)%> € </p>
