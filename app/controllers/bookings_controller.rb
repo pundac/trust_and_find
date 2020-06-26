@@ -32,7 +32,13 @@ class BookingsController < ApplicationController
   def intervention_schedueles
     build_booking_with_params
     authorize @booking
+    
   end
+
+  def show 
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end 
 
   private
 
