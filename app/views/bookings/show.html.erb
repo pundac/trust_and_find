@@ -1,5 +1,5 @@
 <div class=" m-3 fix-footer">
-<div class="  m-auto shadow card   transi " style="max-width: 80%";>
+<%# <div class="  m-auto shadow card   transi " style="max-width: 80%";>
   <div class="text-center row no-gutters">
     <div class="col-4  mt-3 ">
       <img src="https://images.pexels.com/photos/919436/pexels-photo-919436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="img-card img-fluid rounded " alt="pay" >
@@ -7,15 +7,27 @@
     <div class=" text-justify text-center col-7 m-3 ">
       <div class="card-body">
         <h1 class="card-title">Votre recapitulatif</h1>
-        <p class="text-justify text-center">En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
-        <p class="text-justify text-center"> Votre rendez-vous est du: <strong><%=@booking.starts_at%></strong> au <strong><%=@booking.ends_at%></strong></p>
-        <p class="text-justify text-center"> Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
-        <h2 class="text-justify text-center">Cout total</h2>
+        <p class="text-justify text-center"></p>
+        <%# <h2 class="text-justify text-center">Cout total</h2>
         <p class="text-justify text-center"><%= @booking.total.round(2)%> € <//p>
-        <%=link_to "Payer",intervention_schedueles_bookings_path, class: "button-invers m-2 " %>
-      </div>
+        <%# <%=link_to "Payer",intervention_schedueles_bookings_path, class: "button-invers m-2 " %>
+      <%# </div>
+    </div>
+  </div>
+</div> %> %> %> %>
+
+<div class="card-product">
+  <img src="https://images.pexels.com/photos/919436/pexels-photo-919436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=126" />
+  <div class="card-product-infos">
+    <h1>Votre recapitulatif</h1>
+    <p>En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
+    <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
+    <p>Votre rendez-vous est du: <strong><%=@booking.starts_at%></strong> au <strong><%=@booking.ends_at%></strong></p>
+    <div class="">
+      <h2>Cout total</h2>
+      <p><%= @booking.total.round(2)%> € </p>
+      <%=link_to "Payer",intervention_schedueles_bookings_path, class: "button-invers " %>
     </div>
   </div>
 </div>
-</div>
-
+</div> 
