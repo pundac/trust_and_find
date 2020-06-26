@@ -34,10 +34,6 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
-
   def paiement
     authorize @booking
   end
