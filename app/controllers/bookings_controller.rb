@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!, except: [:new, :confirmation, :intervention_schedueles]
   def new
     @booking = Booking.new
+    authorize @booking
     @step1 = params.dig(:surface_area).blank?
     @step2 = !@step1 && params.dig(:product).blank?
     @step3 = !params.dig(:product).blank?
@@ -8,24 +10,28 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = User.first # Ne pas oublier de changer pour que ce soit le current user
+    @booking.user = current_user # Ne pas oublier de changer pour que ce soit le current user
+    authorize @booking
     if @booking.save
       redirect_to booking_path(@booking)
     else
-      raise
+      render 'new'
     end
   end
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def confirmation
     build_booking_with_params
+    authorize @booking
   end
 
   def intervention_schedueles
     build_booking_with_params
+    authorize @booking
   end
 
   def show 
