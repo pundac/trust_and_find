@@ -1,13 +1,13 @@
-<h1 class="text-center mt-4">Quel est le suport existant?</h1>
+<h1 class="text-center mt-4 mb-4">Quel est le suport existant?</h1>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-lg-3">
+    <div class="row pl-0 pr-0">
+      <div class="col-12 col-lg-3 ">
         <div class="card-floor transi <%= params[:product] == 'Carrelage' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'Carrelage', anchor:"step3") do %>
             <%= image_tag "https://i.pinimg.com/originals/88/ff/6e/88ff6e93b081465f9ec21d6bd3f11305.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
 
-            <h3>Carrelage : </h3>
+            <h3>Carrelage</h3>
             <hr color= #dbd4d4>
             <ul>
               <li><p>tomettes</p></li>
