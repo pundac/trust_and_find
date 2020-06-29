@@ -10,9 +10,25 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user # Ne pas oublier de changer pour que ce soit le current user
+    @product = Product.find(params[:product_id])
+    @booking.product = @product
+    @booking.user = current_user
+    @booking.price_cents = @booking.product.price_per_square_meter * @booking.surface_area * 100
     authorize @booking
     if @booking.save
+      session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        line_items: [{
+          name: "Réalisation d'un #{@booking.product.product_type} sur #{@booking.surface_area} m2 ",
+          # images: [teddy.photo_url],
+          amount: @booking.price_cents,
+          currency: 'eur',
+          quantity: 1
+        }],
+        success_url: booking_url(@booking),
+        cancel_url: booking_url(@booking)
+      )
+      @booking.update(checkout_session_id: session.id)
       redirect_to booking_path(@booking)
     else
       render 'new'
@@ -36,10 +52,6 @@ class BookingsController < ApplicationController
     @step5 = true
   end
 
-  def paiement
-    authorize @booking
-  end
-
   private
 
   def build_booking_with_params
@@ -51,6 +63,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:surface_area, :product_id, :floor_type, :starts_at, :ends_at)
+    params.require(:booking).permit(:surface_area, :product_id, :floor_type, :starts_at, :ends_at, :price_cents)
   end
 end

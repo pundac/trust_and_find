@@ -24,14 +24,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'stripe'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'money-rails'
 gem 'devise'
 gem 'money-rails'
 gem 'stripe'
-
+gem 'stripe_event'
 gem 'pundit'
 
 # Reduces boot times through caching; required in config/boot.rb

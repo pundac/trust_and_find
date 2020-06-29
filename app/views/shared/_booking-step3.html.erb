@@ -3,36 +3,39 @@
   <div class="row pl-0 pr-0 mb-4">
     <div class="col-12 col-lg-4 ">
       <div class="card-floor card-mini transi">
-        <%= link_to confirmation_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: 'carrelage') do  %>
+        <%= link_to confirmation_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: 'Carrelage') do  %>
           <div style="color: black">
           <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3-xxRrjmHG-R_mzJDld-8ExnYx9GVx66YTg&usqp=CAU", alt: "Le Wagon", width: 200 %>
-          <h3>Carrelage 23€/m²</h3>
+          <h3>Product.first.product_type</h3>
           <hr color= #dbd4d4>
           <p class="text-center">Le carrelage répondra à vos besoins</p>
+            <p>23€/m2</p>
           </div>
         <% end %>
       </div>
     </div>
     <div class="col-12 col-lg-4 ">
       <div class="card-floor card-mini transi">
-        <%= link_to confirmation_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: 'parquet massif')  do  %>
+        <%= link_to confirmation_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: 'Parquet massif')  do  %>
           <div style="color: black">
           <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc", alt: "Le Wagon", width: 200 %>
-          <h3>Parquet massif 90€/m²</h3>
+          <h3>Product.second.product_type</h3>
           <hr color= #dbd4d4>
           <p class="text-center">Materiaux chaleureux</p>
+            <p>90€/m2</p>
         </div>
         <% end %>
       </div>
     </div>
     <div class="col-12 col-lg-4 ">
       <div class="card-floor card-mini transi">
-        <%= link_to confirmation_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: 'parquet flottant') do  %>
+        <%= link_to confirmation_bookings_path( surface_area: params[:surface_area],product: params[:product], new_product: 'Parquet flottant') do  %>
           <div style="color: black">
           <%= image_tag "https://www.plancheravenue.com/wp-content/uploads/2019/11/renover-parquet-stratifie-1030x687.jpg", alt: "Le Wagon", width: 200 %>
-          <h3>Parquet flottant 20€/m²</h3>
+          <h3>Product.last.product_type</h3>
           <hr color= #dbd4d4>
           <p class="text-center">Sans bruit et agréable</p>
+            <p>20€/m2</p>
           </div>
         <% end %>
       </div>

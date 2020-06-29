@@ -2,6 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :product
   has_one_attached :photo
+  monetize :price_cents
 
   def labor
     if self.product.product_type == 'carrelage'
@@ -14,11 +15,11 @@ class Booking < ApplicationRecord
   end
 
   def depose
-    if self.floor_type == 'carrelage'
+    if self.floor_type == 'Carrelage'
       return 50*self.surface_area
-    elsif self.floor_type == 'parquet massif'
+    elsif self.floor_type == 'Parquet massif'
       return 40*self.surface_area
-    elsif self.floor_type == 'parquet stratifier'
+    elsif self.floor_type == 'Parquet stratifier'
       return 30*self.surface_area
     else
       return 0*self.surface_area
@@ -26,7 +27,7 @@ class Booking < ApplicationRecord
   end
 
   def total
-    return self.depose + self.labor + self.product.price_per_square_meter * self.surface_area + 50
+    return self.price = self.depose + self.labor + self.product.price_per_square_meter * self.surface_area + 50
   end
 
   def image_product
@@ -36,7 +37,7 @@ class Booking < ApplicationRecord
       return 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc'
     else
       return 'https://www.plancheravenue.com/wp-content/uploads/2019/11/renover-parquet-stratifie-1030x687.jpg'
-    end 
-  end 
+    end
+  end
 end
 
