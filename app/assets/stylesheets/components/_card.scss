@@ -67,4 +67,37 @@
 .img-card {
   width: 50vh;
   height: 40vh;
+  
+}
+
+.card-total-cost {
+  margin-top: 100px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.card-icon {
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 50%;
+  }
+}
+
+.card-invoice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
 }

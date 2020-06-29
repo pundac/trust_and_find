@@ -1,4 +1,4 @@
-<div class=" m-3 fix-footer">
+<div class=" m-3 fix-footer justify-content-center">
 <%# <div class="  m-auto shadow card   transi " style="max-width: 80%";>
   <div class="text-center row no-gutters">
     <div class="col-4  mt-3 ">
@@ -17,18 +17,20 @@
 </div> %>
 
 <div class="card-product">
-  <img src="https://images.pexels.com/photos/919436/pexels-photo-919436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=126" />
-  <div class="card-product-infos">
+   <img src="<%=@booking.image_product%>" alt="your floor" >
+  <div class="card-product-infos m-3">
     <h1>Votre recapitulatif</h1>
     <p>En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
-    <p>Votre rendez-vous est du: <strong><%=@booking.starts_at%></strong> au <strong><%=@booking.ends_at%></strong></p>
-    <div class="total_pay">
+    <p>Votre rendez-vous est du: </p> 
+    <p>
+      <strong><%=@booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%=@booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
+    </p>
+    <div class="total_pay mt-3">
       <h2>Cout total</h2>
-      <p ><%= @booking.total.round(2)%> € </p>
-      <p class="total"></p>
-      <div class="total">
-        <%=link_to "Payer",root_path, class: "button-invers " %>
+      <p ><strong><%= @booking.total.round(2)%> € </strong></p>
+      <div class="d-flex justify-content-center mt-3">
+        <%= link_to "Payer", root_path, class: "button-1 w-50" %>
       </div>
     </div>
   </div>
