@@ -43,11 +43,13 @@ class BookingsController < ApplicationController
   def confirmation
     build_booking_with_params
     authorize @booking
+    @step4 = true
   end
 
   def intervention_schedueles
     build_booking_with_params
     authorize @booking
+    @step5 = true
   end
 
   private

@@ -12,6 +12,7 @@
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,.2);
   color: black;
+  min-height: 420px;
   ul {
     list-style: none;
   }
@@ -23,15 +24,13 @@
   h4 {
     text-weight: 900;
   }
-
-  a:hover{
-    text-decoration: none;
-  }
-  hr {
-    background-color: #dbd4d4;
-    opacity: 0,2;
-  }
 }
+
+.card-mini{
+  min-height: 300px;
+  // max-width:
+}
+
 .card-step {
   border: solid 1px #c0c0c0;
   text-align: center;
@@ -55,6 +54,9 @@
   }
 }
 
+a:hover {
+  text-decoration: none;
+}
 
 .hr {
   opacity: 0,2;

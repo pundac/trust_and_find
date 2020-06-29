@@ -1,11 +1,18 @@
 <div class="container text-center">
 
   <h1 class="text-center mb-4">Quelle est la surface à renover?</h1>
-  <%= simple_form_for :bookings, url:     new_booking_path,
-                                 method: :get do |f| %>
-    <%= f.input :surface_area, label: false,
-                               input_html: { name: 'surface_area', value: params[:surface_area]}, class: "mx-5" %>
-    <%= f.submit "Valider", class: 'button-invers mt-4 text-center' %>
-  <% end %>
-
+  <div class="col-xs-2 form-inline justify-content-center">
+    <div>
+      <form class="form-inline ">
+        <div class="form-group mb-2">
+          <%= simple_form_for :bookings, url:     new_booking_path,
+                                         method: :get do |f| %>
+            <%= f.input :surface_area, label: false,
+                                       input_html: { name: 'surface_area', value: params[:surface_area]}, class: "mx-5" %>
+            <%= f.submit "Valider", class: 'button-invers ml-4 text-center' %>
+          <% end %>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
