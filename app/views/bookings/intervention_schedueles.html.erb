@@ -1,11 +1,10 @@
-<%= render 'shared/stepper' %>
-<div class="background_calendar" style="
-    background-image: url(https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;">
+
+<div class="background_calendar">
+
   <div class="d-flex align-self-start justify-content-center fix-footer ">
 
-    <div class="form-wrapper text-justify text-center  text-black p-3 m-3 transi">
+   <div class="form">
+    <%# form-wrapper text-justify text-center rgb(120, 121, 120) bg-light rounded p-3 m-3 transi Larger shadow %>
       <h2>Selectionner vos dates</h2>
 
       <%= simple_form_for [@product, @booking] do |f| %>
@@ -14,7 +13,9 @@
         <%= f.input :surface_area, as: :hidden %>
         <%= f.input :product_id, as: :hidden %>
         <%= f.input :floor_type, as: :hidden %>
-        <%= f.submit 'Valider', class: "button-invers"%>
+        <div class="d-flex justify-content-center">
+          <%= f.submit 'Valider', class: "button-1 justify-content"%>
+        </div>
       <% end %>
     </div>
 
