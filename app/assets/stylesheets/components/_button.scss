@@ -12,13 +12,13 @@
 }
 .button-invers {
   display: block;
-  color: black;
+  color: #007FFF;
   padding: 10px 15px;
   background-color: rgba( 0, 0, 0, 0);
-  border: solid 3px black;
+  border: solid 3px #007FFF;
   transition: all 0.3s;
   &:hover {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 127, 255, 1);
     color: white;
     text-decoration: none;
   }
