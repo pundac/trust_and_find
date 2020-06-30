@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card-floor transi <%= params[:product] == 'Plancher massif' ? 'selected': '' %>">
+        <div class="card-floor transi <%= params[:product] == 'plancher massif' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'plancher massif', anchor:"step3") do  %>
             <%= image_tag "https://www.parqueteriefrancaise.fr/modules/ph_simpleblog/featured/36-featured.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card-floor transi <%= params[:product] == 'Parquet stratifé' ? 'selected': '' %>">
+        <div class="card-floor transi <%= params[:product] == 'parquet stratifé' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'parquet stratifé', anchor:"step3") do  %>
             <%= image_tag "https://static.comment-economiser.fr/documents/images/2018/02/gondolement-lames-guide-comment-nettoyer-sol-stratifie.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card-floor transi <%= params[:product] == 'Brut' ? 'selected': '' %>">
+        <div class="card-floor transi <%= params[:product] == 'brut' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'brut', anchor:"step3") do  %>
             <%= image_tag "https://media1.forumconstruire.com/photo/large/140179.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
