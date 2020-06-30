@@ -85,14 +85,14 @@ a:hover {
 }
 
 .card-icon {
-  min-height: 250px;
   display: flex;
+  min-height: 350px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   img {
-    width: 50%;
+    width: 80%;
   }
 }
 

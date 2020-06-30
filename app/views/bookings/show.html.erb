@@ -1,4 +1,4 @@
-<div class=" m-3 fix-footer justify-content-center">
+<div class=" d-flex align-self-start justify-content-center fix-footer ">
 <%# <div class="  m-auto shadow card   transi " style="max-width: 80%";>
   <div class="text-center row no-gutters">
     <div class="col-4  mt-3 ">
@@ -16,9 +16,10 @@
   </div>
 </div> %>
 
-<div class="card-product">
+
+<div class="card-product ">
    <img src="<%=@booking.image_product%>" alt="your floor" >
-  <div class="card-product-infos m-3">
+  <div class="card-product-infos w-100 m-3">
     <h1>Votre recapitulatif</h1>
     <p>En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
