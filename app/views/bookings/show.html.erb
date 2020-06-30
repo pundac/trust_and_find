@@ -38,9 +38,11 @@
     
      <p ><strong><%= humanized_money_with_symbol(@booking.price)%></strong></p>
       <% if @booking.state == 'pending' %>
-        <div class="d-flex justify-content-center mt-3">
-          <button class="button-1 w-50" id="pay">Payer</button>
+        <div class="  d-flex justify-content-center mt-3">
+           <div class="button_cont"><a class="example_f" href="add-website-here" target="_blank" rel="nofollow"><span>Payer</a></div>
+
         </div>
+
         <script src="https://js.stripe.com/v3/"></script>
         <script>
           const paymentButton = document.getElementById('pay');
