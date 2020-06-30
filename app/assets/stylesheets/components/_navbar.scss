@@ -9,6 +9,7 @@
   left: 0;
   z-index: 11;
   background-color: white;
+  border-bottom: solid 1.25px #C0C0C0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -23,7 +24,9 @@
     height: 70px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     opacity: 2.75;
+    align-items: center;
 }
-.navbar-lewagon a {
-  color: white !important;
+.navbar-lewagon .avatar {
+  height: 50px;
+  width: 50px;
 }

@@ -7,12 +7,12 @@
         <h2 class="text-justify text-center">Devis Estimatif</h2>
         <div class="d-flex flex-grow-1 flex-row m-3">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cout d'achat:</li>
-            <li class="list-group-item">Cout de la main d'oeuvre: </li>
-            <li class="list-group-item">Cout de livraison:</li>
+            <li class="list-group-item">Coût d'achat:</li>
+            <li class="list-group-item">Coût de la main d'oeuvre: </li>
+            <li class="list-group-item">Coût de livraison:</li>
           </ul>
           <ul class="list-group list-group-flush">
-        
+
             <li class="list-group-item"><%= (@booking.product.price_per_square_meter * @booking.surface_area).round(2) %>€</li>
             <li class="list-group-item"><%=(@booking.depose + @booking.labor).round(2)%>€</li>
             <li class="list-group-item">50€</li>
@@ -24,7 +24,7 @@
     <div class="col-12 col-md-3">
       <%# Card CTA %>
       <div class="card-total-cost shadow transi">
-        <h2>Cout total</h2>
+        <h2>Coût total</h2>
         <p><%= @booking.total.round(2)%> € </p>
         <%= link_to "Prise de rendez-vous", intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "button-1"  %>
       </div>
@@ -49,4 +49,3 @@
   </div>
 </div>
 </div>
-  

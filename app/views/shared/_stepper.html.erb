@@ -9,13 +9,13 @@
       </div>
       <div class="mdl-stepper-step <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>2</span></div>
-        <div class="mdl-stepper-title"><p font-size: 16px>le support: <%= params[:product] %></p></div>
+        <div class="mdl-stepper-title"><p font-size: 16px>Le support: <%= params[:product] %></p></div>
         <div class="mdl-stepper-bar-left <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
         <div class="mdl-stepper-bar-right <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
       </div>
       <div class="mdl-stepper-step <%= @step3 || @step4 || @step5 || @step6 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>3</span></div>
-        <div class="mdl-stepper-title">materiaux choisit: <%= params[:new_product] %></div>
+        <div class="mdl-stepper-title">Matériaux choisis: <%= params[:new_product] %></div>
         <div class="mdl-stepper-bar-left <%= @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
         <div class="mdl-stepper-bar-right <%= @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
       </div>
