@@ -27,10 +27,17 @@
     <p>
       <strong><%=@booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%=@booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
     </p>
+
     <div class="total_pay mt-3">
       <h2>Cout total</h2>
-      <p ><strong><%= @booking.total.round(2)%> € </strong></p>
-      <div class="d-flex justify-content-center mt-3">
+      <%# <p ><strong><%= @booking.total.round(2)%>
+      <%# <div class="d-flex justify-content-center mt-3"> %>
+          
+    
+    
+     <p ><strong><%= humanized_money_with_symbol(@booking.price)%></strong></p>
+      <% if @booking.state == 'pending' %>
+        <div class="d-flex justify-content-center mt-3">
           <button class="button-1 w-50" id="pay">Payer</button>
         </div>
         <script src="https://js.stripe.com/v3/"></script>
@@ -46,9 +53,6 @@
       <% else %>
         <h2>Merci d'avoir payé !</h2>
       <% end %>
-
     </div>
   </div>
 </div>
-</div>
-
