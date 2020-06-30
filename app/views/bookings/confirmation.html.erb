@@ -25,7 +25,7 @@
       <%# Card CTA %>
       <div class="card-total-cost shadow transi">
         <h2 class="little-title">Coût total</h2>
-        <p><strong><%= @booking.total%></strong> € </p>
+        <p><strong><%= @booking.total%> € </strong></p>
         <%= link_to "Prise de rendez-vous", intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "example_f"  %>
       </div>
     </div>
