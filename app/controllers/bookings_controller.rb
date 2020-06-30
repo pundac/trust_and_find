@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @product = Product.find(params[:product_id])
     @booking.product = @product
     @booking.user = current_user
-    @booking.price_cents = @booking.product.price_per_square_meter * @booking.surface_area * 100
+    @booking.price_cents = @booking.total * 100# @booking.product.price_per_square_meter * @booking.surface_area * 100
     authorize @booking
     if @booking.save
       session = Stripe::Checkout::Session.create(
