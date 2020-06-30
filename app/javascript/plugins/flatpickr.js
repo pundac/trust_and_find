@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
+import { French } from "flatpickr/dist/l10n/fr.js";
 
 
 $( document ).on('turbolinks:load', function() {
@@ -8,7 +9,7 @@ $( document ).on('turbolinks:load', function() {
     altInput: true,
     plugins: [new rangePlugin({ input: "#range_end"})],
     enableTime: true,
-    dateFormat: "Y-m-d H:i"
-      
+    dateFormat: "d-m-Y H:i",
+    time_24hr: true
   });
 });

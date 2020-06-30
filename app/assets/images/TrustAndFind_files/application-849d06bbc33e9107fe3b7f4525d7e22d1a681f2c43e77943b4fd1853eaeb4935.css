@@ -19304,9 +19304,9 @@ readers do not read off random characters that represent icons */
 
 /* line 7, app/assets/stylesheets/components/_alert.scss */
 .alert-blue {
-  background-color: #007FFF;
+  background-color: #009FB7;
   color: white;
-  border-color: #007FFF;
+  border-color: #009FB7;
   opacity: 0.8;
 }
 
@@ -19471,7 +19471,7 @@ readers do not read off random characters that represent icons */
 
 /* line 42, app/assets/stylesheets/components/_card.scss */
 .card-step:hover .fas {
-  color: #007FFF;
+  color: #009FB7;
 }
 
 /* line 47, app/assets/stylesheets/components/_card.scss */
@@ -19497,7 +19497,7 @@ readers do not read off random characters that represent icons */
 
 /* line 63, app/assets/stylesheets/components/_card.scss */
 .selected {
-  border: solid 4px #007FFF;
+  border: solid 4px #009FB7;
   transform: scale(1.1);
 }
 
@@ -19526,16 +19526,16 @@ readers do not read off random characters that represent icons */
 /* line 13, app/assets/stylesheets/components/_button.scss */
 .button-invers {
   display: block;
-  color: #007FFF;
+  color: #009FB7;
   padding: 10px 15px;
   background-color: rgba(0, 0, 0, 0);
-  border: solid 3px #007FFF;
+  border: solid 3px #009FB7;
   transition: all 0.3s;
 }
 
 /* line 20, app/assets/stylesheets/components/_button.scss */
 .button-invers:hover {
-  background-color: #007fff;
+  background-color: #009FB7;
   color: white;
   text-decoration: none;
 }
@@ -19625,7 +19625,7 @@ readers do not read off random characters that represent icons */
 
 /* line 26, app/assets/stylesheets/components/_footer.scss */
 .footer-links a:hover {
-  color: #007FFF;
+  color: #009FB7;
 }
 
 /* line 29, app/assets/stylesheets/components/_footer.scss */
@@ -19637,7 +19637,7 @@ readers do not read off random characters that represent icons */
 
 /* line 33, app/assets/stylesheets/components/_footer.scss */
 .footer-copyright:hover {
-  color: #007FFF;
+  color: #009FB7;
 }
 
 /* line 37, app/assets/stylesheets/components/_footer.scss */

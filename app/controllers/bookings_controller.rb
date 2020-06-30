@@ -38,6 +38,7 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
+    @step6 = true
   end
 
   def confirmation
