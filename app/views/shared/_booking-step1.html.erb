@@ -1,6 +1,6 @@
 <div class="container text-center">
 
-  <h1 class="text-center mb-4 title">Quelle est la surface à rénover ?</h1>
+  <h1 class="text-center mb-4 title">Quelle est la surface à rénover m² ?</h1>
   <div class="col-xs-2 form-inline justify-content-center">
     <div>
       <form class="form-inline ">
@@ -9,7 +9,7 @@
                                          method: :get do |f| %>
             <%= f.input :surface_area, label: false,
                                        input_html: { name: 'surface_area', value: params[:surface_area], class: "input-value" } %>
-            <%= f.submit "Valider", class: 'button-invers ml-4 text-center' %>
+            <%= f.submit "Valider", class: 'example_f ml-4 text-center' %>
           <% end %>
         </div>
       </form>

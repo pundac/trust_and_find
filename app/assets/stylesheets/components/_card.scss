@@ -39,7 +39,7 @@
   &:hover {
     transform: scale(1.025);
     .fas {
-      color: #007FFF;
+      color: #009FB7;
     }
   }
 }
@@ -63,7 +63,7 @@ a:hover {
 }
 
 .selected {
-  border: solid 4px #007FFF;
+  border: solid 4px #009FB7;
   transform: scale(1.1);
 }
 
@@ -85,14 +85,14 @@ a:hover {
 }
 
 .card-icon {
-  min-height: 250px;
   display: flex;
+  min-height: 350px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   img {
-    width: 50%;
+    width: 80%;
   }
 }
 
@@ -109,3 +109,4 @@ a:hover {
   border: solid 0.25px #C0C0C0;
   height: 7vh;
 }
+
