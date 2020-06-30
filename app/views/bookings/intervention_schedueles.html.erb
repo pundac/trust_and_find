@@ -5,7 +5,7 @@
 
    <div class="form">
     <%# form-wrapper text-justify text-center rgb(120, 121, 120) bg-light rounded p-3 m-3 transi Larger shadow %>
-      <h2>Selectionner vos dates</h2>
+      <h2>Sélectionnez vos dates</h2>
 
       <%= simple_form_for [@product, @booking] do |f| %>
         <%= f.input :starts_at,as: :string, required: true, input_html: { id: "range_start" } %>
