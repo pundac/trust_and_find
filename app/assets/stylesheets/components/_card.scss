@@ -39,7 +39,7 @@
   &:hover {
     transform: scale(1.025);
     .fas {
-      color: #007FFF;
+      color: #009FB7;
     }
   }
 }
@@ -63,14 +63,14 @@ a:hover {
 }
 
 .selected {
-  border: solid 4px #007FFF;
+  border: solid 4px #009FB7;
   transform: scale(1.1);
 }
 
 .img-card {
   width: 50vh;
   height: 40vh;
-  
+
 }
 
 .card-total-cost {

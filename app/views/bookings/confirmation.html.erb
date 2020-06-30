@@ -12,7 +12,7 @@
             <li class="list-group-item">Cout de livraison:</li>
           </ul>
           <ul class="list-group list-group-flush">
-        
+
             <li class="list-group-item"><%= (@booking.product.price_per_square_meter * @booking.surface_area).round(2) %>€</li>
             <li class="list-group-item"><%=(@booking.depose + @booking.labor).round(2)%>€</li>
             <li class="list-group-item">50€</li>
@@ -49,4 +49,3 @@
   </div>
 </div>
 </div>
-  

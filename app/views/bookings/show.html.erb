@@ -1,3 +1,4 @@
+<%= render 'shared/stepper' %>
 <div class=" d-flex align-self-start justify-content-center fix-footer ">
 <%# <div class="  m-auto shadow card   transi " style="max-width: 80%";>
   <div class="text-center row no-gutters">
@@ -24,7 +25,7 @@
     <p>En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
 
-      <p>Votre rendez-vous est du: </p> 
+      <p>Votre rendez-vous est du: </p>
     <p>
       <strong><%=@booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%=@booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
     </p>
@@ -33,9 +34,9 @@
       <h2>Cout total</h2>
       <%# <p ><strong><%= @booking.total.round(2)%>
       <%# <div class="d-flex justify-content-center mt-3"> %>
-          
-    
-    
+
+
+
      <p ><strong><%= humanized_money_with_symbol(@booking.price)%></strong></p>
       <% if @booking.state == 'pending' %>
         <div class="  d-flex justify-content-center mt-3">
