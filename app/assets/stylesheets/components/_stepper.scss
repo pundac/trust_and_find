@@ -3,7 +3,7 @@
 .mdl-card {
   width: 100%;
   min-height: 0;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 .mdl-card__supporting-text {
@@ -114,12 +114,12 @@
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-title,
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-optional {
   text-align: center;
-  color: rgba(0, 0, 0, .26);
+  color: #4b4949;
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step .mdl-stepper-title {
   font-weight: 500;
-  color: rgba(0, 0, 0, .87);
+  color:#4b4949;
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step.step-done .mdl-stepper-title,
