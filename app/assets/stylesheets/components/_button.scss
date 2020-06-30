@@ -4,6 +4,7 @@
   background-color: rgba(255, 255, 255, 0);
   border: solid 3px white;
   transition: all 0.3s;
+  
   &:hover {
     background-color: rgba(255, 255, 255, 1);
     color: black;
@@ -12,13 +13,21 @@
 }
 .button-invers {
   display: block;
+
   color: #007FFF;
+
   padding: 10px 15px;
+  text-align: center;
   background-color: rgba( 0, 0, 0, 0);
+
   border: solid 3px #007FFF;
+
   transition: all 0.3s;
+
   &:hover {
+
     background-color: rgba(0, 127, 255, 1);
+
     color: white;
     text-decoration: none;
   }
@@ -31,3 +40,30 @@
 .button-confirmation {
   margin: 5%;
 }
+.button-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:#007FFF;
+  border-radius: 300px;
+  color:#ffffff;
+  
+ border:none;
+  padding: 10px 32px;
+  font-weight: 700;
+  
+  font-family:"Roboto", sans-serif;
+  
+  box-shadow: -4px -4px 6px #ffffff, 2px 2px 12px #6c7986 ;
+  transition: all 0.2s ease-in out;
+  &:hover {
+    text-decoration: none;
+    color:  #ffffff;
+    transform: scale(1.025);
+  }
+  
+}
+
+
+ 
