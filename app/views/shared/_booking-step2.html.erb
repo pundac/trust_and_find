@@ -1,4 +1,4 @@
-<h1 class="text-center mt-4 mb-4">Quel est le suport existant?</h1>
+<h1 class="text-center mt-4 mb-4">Quel est le support existant?</h1>
   <div class="container-fluid">
     <div class="row pl-0 pr-0">
       <div class="col-12 col-lg-3 ">
@@ -19,11 +19,11 @@
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card-floor transi <%= params[:product] == 'plancher massif' ? 'selected': '' %>">
+        <div class="card-floor transi <%= params[:product] == 'Plancher massif' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'plancher massif', anchor:"step3") do  %>
             <%= image_tag "https://www.parqueteriefrancaise.fr/modules/ph_simpleblog/featured/36-featured.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
-            <h3>plancher massif</h3>
+            <h3>Plancher massif</h3>
             <hr color= #dbd4d4>
             <ul><li><p>Toutes essences de bois</p></li></ul>
             </div>
@@ -31,26 +31,26 @@
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card-floor transi <%= params[:product] == 'parquet stratifé' ? 'selected': '' %>">
+        <div class="card-floor transi <%= params[:product] == 'Parquet stratifé' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'parquet stratifé', anchor:"step3") do  %>
             <%= image_tag "https://static.comment-economiser.fr/documents/images/2018/02/gondolement-lames-guide-comment-nettoyer-sol-stratifie.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
-            <h3>parquet stratifé</h3>
+            <h3>Parquet stratifé</h3>
             <hr color= #dbd4d4>
-              <ul><li><p>Tous types de parquet stratifié</p></li></ul>
+              <ul><li><p>Tout type de parquet stratifié</p></li></ul>
             </div>
           <% end %>
         </div>
       </div>
       <div class="col-12 col-lg-3">
-        <div class="card-floor transi <%= params[:product] == 'brut' ? 'selected': '' %>">
+        <div class="card-floor transi <%= params[:product] == 'Brut' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'brut', anchor:"step3") do  %>
             <%= image_tag "https://media1.forumconstruire.com/photo/large/140179.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
-            <h3>brut</h3>
+            <h3>Brut</h3>
             <hr color= #dbd4d4>
-              <ul><li><p>beton</p></li>
-                <li><p>plancher bois...</p></li></ul>
+              <ul><li><p>Béton</p></li>
+                <li><p>Plancher en bois...</p></li></ul>
             </div>
           <% end %>
         </div>

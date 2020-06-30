@@ -6,7 +6,7 @@
   <div class="d-flex align-self-start justify-content-center fix-footer ">
 
     <div class="form-wrapper text-justify text-center  text-black p-3 m-3 transi">
-      <h2>Selectionner vos dates</h2>
+      <h2>Selectionnez vos dates</h2>
 
       <%= simple_form_for [@product, @booking] do |f| %>
         <%= f.input :starts_at,as: :string, required: true, input_html: { id: "range_start" } %>
