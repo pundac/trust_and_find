@@ -6,6 +6,7 @@
 }
 
 .card-floor {
+  position: relative;
   overflow: hidden !important;
   padding: 0 !important;
   background-color: white;
@@ -24,10 +25,16 @@
   h4 {
     text-weight: 900;
   }
+  h5{
+    position: absolute;
+    font-size: 25px;
+    right: 67px;
+    bottom: 24px;
+  }
 }
 
 .card-mini{
-  min-height: 300px;
+  min-height: 400px;
   // max-width:
 }
 
@@ -85,14 +92,14 @@ a:hover {
 }
 
 .card-icon {
-  min-height: 250px;
   display: flex;
+  min-height: 350px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   img {
-    width: 50%;
+    width: 80%;
   }
 }
 
@@ -104,3 +111,36 @@ a:hover {
   background-color: white;
   border-radius: 15px;
 }
+.input-value {
+  background-color: rgba(250, 250, 250, 0.6) !important;
+  border: solid 0.25px #C0C0C0;
+  height: 7vh;
+}
+
+.card-price{
+  margin: 0;
+  font-family: Roboto;
+  position: absolute;
+  right: 16px;
+  bottom: 8px;
+  font-size: 48px;
+  font-weight: black;
+
+  .currency {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .units {
+    font-size: 16px;
+    font-weight: 200;
+  }
+}
+
+.card-trip h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
