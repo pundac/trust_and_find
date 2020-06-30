@@ -77,7 +77,8 @@
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step.active-step .mdl-stepper-circle {
-  background-color: #007FFF;
+  margin-bottom: 16px;
+  background-color: #009FB7;
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step.step-done .mdl-stepper-circle:before {
@@ -105,7 +106,7 @@
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-title {
-  margin-top: 16px;
+  // margin-top: 16px;
   font-size: 14px;
   font-weight: normal;
 }
@@ -148,12 +149,12 @@
   right: 0;
   left: 50%;
   margin-left: 20px;
-  border-top: 6px solid #007FFF;
+  border-top: 6px solid #009FB7;
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-left-done {
   left: 0;
   right: 50%;
   margin-right: 20px;
-  border-top: 6px solid #007FFF;
+  border-top: 6px solid #009FB7;
 }
