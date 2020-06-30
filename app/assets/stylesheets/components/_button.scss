@@ -78,16 +78,22 @@
   text-transform: uppercase;
   font-size: 15px;
   padding: 10px;
-  
+
   transition: all 0.4s;
   cursor: pointer;
   margin: 5px;
+  &:hover {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 1);
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
 }
 .example_f span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.4s;
+  color: white;
 }
 .example_f span:after {
   content: '\00bb';
