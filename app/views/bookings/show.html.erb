@@ -21,17 +21,17 @@
 <div class="card-product ">
    <img src="<%=@booking.image_product%>" alt="your floor" >
   <div class="card-product-infos w-100 m-3">
-    <h1>Votre recapitulatif</h1>
-    <p>En esperant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
+    <h1>Votre récapitulatif</h1>
+    <p>En espérant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
 
       <p>Votre rendez-vous est du: </p>
     <p>
-      <strong><%=@booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%=@booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
+      <strong><%= @booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
     </p>
 
     <div class="total_pay mt-3">
-      <h2>Cout total</h2>
+      <h2>Coût total</h2>
       <%# <p ><strong><%= @booking.total.round(2)%>
       <%# <div class="d-flex justify-content-center mt-3"> %>
 
@@ -55,7 +55,7 @@
           });
         </script>
       <% else %>
-        <h2>Merci d'avoir payé !</h2>
+        <h2>Merci pour votre confiance !</h2>
       <% end %>
     </div>
   </div>
