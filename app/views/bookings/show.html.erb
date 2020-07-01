@@ -25,9 +25,9 @@
     <p>En espérant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
 
-      <p>Votre rendez-vous est du: </p>
+    <p>Vos travaux sont prévus du: </p>
     <p>
-      <strong><%= @booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
+      <strong><%= @booking.starts_at.strftime("%d/%m/%Y à %Hh%M")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y à %Hh%M")%></strong>
     </p>
 
     <div class="total_pay mt-3">
@@ -37,7 +37,9 @@
 
 
 
-     <h2 class = "mt-3"><strong><%= humanized_money_with_symbol(@booking.total)%></strong></h2>
+      <h2 class = "mt-3">
+        <strong><%= number_to_currency(@booking.total, unit: "€", separator: ",", delimiter: " ", format: "%n %u")%></strong>
+      </h2>
       <% if @booking.state == 'pending' %>
         <div class="  d-flex justify-content-center mt-3">
            <div class="button_cont"><a class="example_f" id="pay" rel="nofollow"><span>Payer</span></a></div>
