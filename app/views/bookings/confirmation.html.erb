@@ -13,8 +13,8 @@
           </ul>
           <ul class="list-group list-group-flush">
 
-            <li class="list-group-item"><%= humanized_money_with_symbol(@booking.product.price_per_square_meter * @booking.surface_area) %></li>
-            <li class="list-group-item"><%= humanized_money_with_symbol(@booking.depose + @booking.labor)%></li>
+            <li class="list-group-item"><%= number_to_euro(@booking.product.price_per_square_meter * @booking.surface_area) %></li>
+            <li class="list-group-item"><%=number_to_euro(@booking.depose + @booking.labor)%></li>
             <li class="list-group-item">50€</li>
           </ul>
         </div>
@@ -24,8 +24,8 @@
     <div class="col-12 col-md-3">
       <%# Card CTA %>
       <div class="card-total-cost shadow transi">
-        <h1 class="little-title">Coût total</h1>
-        <h2><strong><%= humanized_money_with_symbol(@booking.total)%></strong></h2>
+        <h2 class="little-title">Coût total</h2>
+        <p><strong><%= number_to_euro(@booking.total)%></strong></p>
         <%= link_to "Prise de rendez-vous", intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "example_f"  %>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <div class='w-100'>
           <p class="text-center">Type de produit: <strong><%=@booking.product.product_type%></strong></p>
           <p class="text-center">Descriptif: <strong><%=@booking.product.description%></strong></p>
-          <p class="text-center">Prix du produit au mètre carré: <strong> <%=humanized_money_with_symbol(@booking.product.price_per_square_meter)%></strong></p>
+          <p class="text-center">Prix du produit au mètre carré: <strong> <%=number_to_euro(@booking.product.price_per_square_meter)%></strong></p>
         </div>
       </div>
     </div>

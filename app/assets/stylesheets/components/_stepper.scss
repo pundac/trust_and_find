@@ -54,7 +54,7 @@
   border-bottom-right-radius: 0;
 }
 
-.mdl-stepper-horizontal-alternative .mdl-stepper-step:hover .mdl-stepper-circle {
+.mdl-stepper-horizontal-alternative .mdl-stepper-circle {
   background-color: #757575;
 }
 
@@ -140,9 +140,9 @@
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-left,
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-bar-right {
-  position: absolute;
-  top: 45px;
-  height: 1px;
+  position:   absolute;
+  top:        45px;
+  height:     1px;
   border-top: 1px solid #BDBDBD;
 }
 
@@ -160,6 +160,22 @@
   right: 50%;
   margin-right: 20px;
   border-top: 6px solid #009FB7;
+}
+
+.mdl-stepper-bar-left-grey {
+  left:         0;
+  right:        50%;
+  margin-right: 20px;
+  border-top:   6px solid #9E9E9E !important;
+}
+
+.mdl-stepper-bar-right-grey {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  left: 50%;
+  margin-left: 20px;
+  border-top:  6px solid #9E9E9E !important;
 }
 
 .mdl-stepper-circle span{
