@@ -13,8 +13,8 @@ User.destroy_all
 
 
 # user
-gaspar= User.create!(name:'Foufou', address: '3 Avenue Asta la Vista', email: 'gaspar@gmail.com', password:"1234567", phone: "0669696969", zip_code: "59 000", city: 'Baby' )
-sami= User.create!(name:'Evil to the end', address: '666 High Way to Hell', email: 'sami@gmail.com', password: "1234567", phone: '0666666666', zip_code: "6 666", city: 'Iwo')
+gaspar= User.create!(name:'Gaspar', address: '3 Avenue Asta la Vista', email: 'gaspar@gmail.com', password:"1234567", phone: "0669696969", zip_code: "59 000", city: 'Baby' )
+sami= User.create!(name:'Sami', address: '666 High Way to Hell', email: 'sami@gmail.com', password: "1234567", phone: '0666666666', zip_code: "6 666", city: 'Iwo')
 
 #product
 
