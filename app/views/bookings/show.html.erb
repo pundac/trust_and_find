@@ -25,9 +25,9 @@
     <p>En espérant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
     <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
 
-      <p>Votre rendez-vous est du: </p>
+    <p>Vos travaux sont prévus du: </p>
     <p>
-      <strong><%= @booking.starts_at.strftime("%d/%m/%Y %H:%M")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y %H:%M")%></strong>
+      <strong><%= @booking.starts_at.strftime("%d/%m/%Y à %Hh%M")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y à %Hh%M")%></strong>
     </p>
 
     <div class="total_pay mt-3">
