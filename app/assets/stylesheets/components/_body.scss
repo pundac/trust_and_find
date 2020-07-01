@@ -1,18 +1,23 @@
 html,body{
-    height:100%;
-    touch-action: manipulation;
-  }
-  body{
+  height:100%;
+  touch-action: manipulation;
+}
+body{
 
-    justify-content:center;
-    align-items:center;
+  justify-content:center;
+  align-items:center;
 
-    font-family:"Roboto", sans-serif;
-    background-color: #f4f5f6;
-    font-size:14px;
-    color:#4b4949;
-  }
-  .title {
-    font-family: 'Cormorant Garamond', serif;
-    color: black;
-  }
+  font-family:"Roboto", sans-serif;
+  background-color: #f4f5f6;
+  font-size:14px;
+  color:#4b4949;
+}
+.title {
+  font-family: 'Halant', serif;
+  background: -webkit-linear-gradient(90deg, #52AA5E, #009FB7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.little-title {
+  font-family: 'Maven Pro', sans-serif;
+}
