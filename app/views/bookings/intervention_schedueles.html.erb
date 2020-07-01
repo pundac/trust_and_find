@@ -8,8 +8,8 @@
       <h2 class="title">Sélectionnez vos dates</h2>
 
       <%= simple_form_for [@product, @booking] do |f| %>
-        <%= f.input :starts_at, label: 'Débute le', as: :string, required: false, input_html: { id: "range_start", class: "input-value" } %>
-        <%= f.input :ends_at, label: 'Finit le', as: :string, required: false, input_html: { id: "range_end", class: "input-value" } %>
+        <%= f.input :starts_at, label: false, placeholder: 'Débute le', as: :string, required: false, input_html: { id: "range_start", class: "input-value" } %>
+        <%= f.input :ends_at, label: false, placeholder: 'Finit le', as: :string, required: false, input_html: { id: "range_end", class: "input-value" } %>
         <%= f.input :surface_area, as: :hidden %>
         <%= f.input :product_id, as: :hidden %>
         <%= f.input :floor_type, as: :hidden %>
