@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  include ActionView::Helpers::NumberHelper
   before_action :authenticate_user!, except: [:new, :confirmation, :intervention_schedueles]
   def new
     @booking = Booking.new

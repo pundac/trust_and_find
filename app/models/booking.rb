@@ -31,13 +31,16 @@ class Booking < ApplicationRecord
   end
 
   def image_product
-    if self.product.product_type == 'carrelage'
+    if self.product.product_type == 'Carrelage'
       return 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3-xxRrjmHG-R_mzJDld-8ExnYx9GVx66YTg&usqp=CAU'
-    elsif self.product.product_type == 'parquet massif'
+    elsif self.product.product_type == 'Parquet massif'
       return 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSEQjKk61mtDGcVQc8sWAnYp13sMjrez2IH7RBlRDZGPldffmc8Xp9EHlmEvp4&usqp=CAc'
     else
       return 'https://www.plancheravenue.com/wp-content/uploads/2019/11/renover-parquet-stratifie-1030x687.jpg'
     end
   end
+
+
+
 end
 
