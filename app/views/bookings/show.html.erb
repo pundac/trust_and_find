@@ -10,7 +10,7 @@
       <p> <strong><%= @booking.starts_at.strftime("%d/%m/%Y à %Hh%M")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y à %Hh%M")%></strong></p>
       <div class="total_pay mt-3">
         <h2 >Coût total</h2>
-        <h2 class = "mt-3"><strong><%= number_to_currency(@booking.total, unit: '€',separator:',', delimiter:' ', format:'%n %u')%></strong></h2>
+        <h2 class = "mt-3"><strong><%= number_to_euro(@booking.total) %></strong></h2>
         <% if @booking.state == 'pending' %>
           <div class="  d-flex justify-content-center mt-3">
             <div class="button_cont"><a class="example_f" id="pay" rel="nofollow"><span>Payer</span></a></div>
