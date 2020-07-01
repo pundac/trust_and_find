@@ -81,8 +81,8 @@ a:hover {
 }
 
 .card-total-cost {
-  margin-top: 100px;
-  min-height: 200px;
+  margin-top: 20px;
+  min-height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,28 +134,10 @@ a:hover {
   .units {
     font-size: 16px;
     font-weight: 200;
+    color: #009FB7;
   }
 }
 
-.card-price{
-  margin: 0;
-  font-family: Roboto;
-  position: absolute;
-  right: 16px;
-  bottom: 8px;
-  font-size: 48px;
-  font-weight: black;
-
-  .currency {
-    font-weight: bold;
-    font-size: 24px;
-  }
-
-  .units {
-    font-size: 16px;
-    font-weight: 200;
-  }
-}
 
 .card-trip h3 {
   font-size: 16px;
