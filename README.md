@@ -6,5 +6,5 @@
 ### Sign In
 
 - [Link](https://find-and-trust.herokuapp.com/users/sign_in)
-- `gaspar@mgail.com`
+- `sami@gmail.com`
 - `1234567`
