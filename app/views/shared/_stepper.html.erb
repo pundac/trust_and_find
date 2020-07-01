@@ -12,41 +12,41 @@
         <div class="mdl-stepper-circle"><span>2</span></div>
         <div class="mdl-stepper-title"><b style="font-size:20px">Le support</b></div>
         <div class="mdl-stepper-title"><%= @step6 ? @booking.floor_type : params[:product] %></div>
-        <div class="mdl-stepper-bar-left <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
-        <div class="mdl-stepper-bar-right <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
+        <div class="mdl-stepper-bar-left <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
+        <div class="mdl-stepper-bar-right <%= @step2 || @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
       </div>
       <div class="mdl-stepper-step <%= @step3 || @step4 || @step5 || @step6 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>3</span></div>
         <div class="mdl-stepper-title"><b style="font-size:20px">Materiaux choisi</b></div>
         <div class="mdl-stepper-title"><%= @step6 ? @booking.product.product_type : params[:new_product] %></div>
-        <div class="mdl-stepper-bar-left <%= @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
-        <div class="mdl-stepper-bar-right <%= @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
+        <div class="mdl-stepper-bar-left <%= @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
+        <div class="mdl-stepper-bar-right <%= @step3 || @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
       </div>
       <div class="mdl-stepper-step <%= @step4 || @step5 || @step6 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>4</span></div>
         <div class="mdl-stepper-title"><b style="font-size:20px">Devis</b></div>
-        <div class="mdl-stepper-bar-left <%= @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
-        <div class="mdl-stepper-bar-right <%= @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
+        <div class="mdl-stepper-bar-left <%= @step4 || @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
+        <div class="mdl-stepper-bar-right <%= @step4 || @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
       </div>
       <div class="mdl-stepper-step <%= @step5 || @step6 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>5</span></div>
         <div class="mdl-stepper-title"><b style="font-size:20px">Rdv</b></div>
         <div class="mdl-stepper-title"><%= @booking.starts_at.strftime("%d/%m/%Y à %Hh%M") if @step6 %></div>
         <div class="mdl-stepper-title"><%= @booking.ends_at.strftime("%d/%m/%Y à %Hh%M") if @step6 %></div>
-        <div class="mdl-stepper-bar-left <%= @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
-        <div class="mdl-stepper-bar-right <%= @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
+        <div class="mdl-stepper-bar-left <%= @step5 || @step6 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
+        <div class="mdl-stepper-bar-right <%= @step5 || @step6 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
       </div>
       <div class="mdl-stepper-step <%= @step6 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>6</span></div>
         <div class="mdl-stepper-title"><b style="font-size:20px">Récapitulatif</b></div>
-        <div class="mdl-stepper-bar-left <%= @step6 || @step7 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
-        <div class="mdl-stepper-bar-right <%= @step6 || @step7 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
+        <div class="mdl-stepper-bar-left <%= @step6 || @step7 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
+        <div class="mdl-stepper-bar-right <%= @step6 || @step7 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
       </div>
       <div class="mdl-stepper-step <%= @step7 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>7</span></div>
         <div class="mdl-stepper-title"><b style="font-size:20px">Paiement</b></div>
-        <div class="mdl-stepper-bar-left <%= @step7 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left' %>"></div>
-        <div class="mdl-stepper-bar-right <%= @step7 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right' %>"></div>
+        <div class="mdl-stepper-bar-left <%= @step7 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
+        <div class="mdl-stepper-bar-right <%= @step7 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
       </div>
 
     </div>
