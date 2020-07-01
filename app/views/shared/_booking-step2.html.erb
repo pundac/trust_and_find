@@ -5,15 +5,16 @@
         <div class="card-floor transi <%= params[:product] == 'Carrelage' ? 'selected': '' %>">
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'Carrelage', anchor:"step3") do %>
             <%= image_tag "https://i.pinimg.com/originals/88/ff/6e/88ff6e93b081465f9ec21d6bd3f11305.jpg", alt: "Le Wagon", width: 200 %>
+            <h3 id="carrelage" class="card-title">Carrelage</h3>
             <div style="color: black">
-
-            <h3>Carrelage</h3>
-            <hr color= #dbd4d4>
-            <ul>
-              <li><p>Tomettes</p></li>
-              <li><p>Grès-cérame</p></li>
-              <li><p>Carreaux de marbre ou de ciment.</p></li>
-            </ul>
+              <ul>
+                <li>
+                  <p class="para">Grès-cérame</p>
+                </li>
+                <li>
+                  <p class="para">Carreaux marbré</p>
+                </li>
+              </ul>
             </div>
           <% end %>
         </div>
@@ -23,9 +24,15 @@
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'plancher massif', anchor:"step3") do  %>
             <%= image_tag "https://www.parqueteriefrancaise.fr/modules/ph_simpleblog/featured/36-featured.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
-            <h3>Plancher massif</h3>
-            <hr color= #dbd4d4>
-            <ul><li><p>Toutes essences de bois</p></li></ul>
+            <h3 class="card-title">Plancher massif</h3>
+            <ul>
+              <li>
+                <p class="para">Toutes essences de bois</p>
+              </li>
+              <li>
+                <p class="para">Bois verni et lisse</p>
+              </li>
+            </ul>
             </div>
           <% end %>
         </div>
@@ -35,9 +42,15 @@
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'parquet stratifé', anchor:"step3") do  %>
             <%= image_tag "https://static.comment-economiser.fr/documents/images/2018/02/gondolement-lames-guide-comment-nettoyer-sol-stratifie.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
-            <h3>Parquet stratifé</h3>
-            <hr color= #dbd4d4>
-              <ul><li><p>Tout type de parquet stratifié</p></li></ul>
+            <h3 class="card-title">Parquet stratifé</h3>
+              <ul>
+                <li>
+                  <p class="para"> Parquet stratifié </p>
+                </li>
+                <li>
+                  <p class="para"> Parquet solide </p>
+              </li>
+              </ul>
             </div>
           <% end %>
         </div>
@@ -47,10 +60,15 @@
           <%= link_to new_booking_path(surface_area: params[:surface_area], product: 'brut', anchor:"step3") do  %>
             <%= image_tag "https://media1.forumconstruire.com/photo/large/140179.jpg", alt: "Le Wagon", width: 200 %>
             <div style="color: black">
-            <h3>Brut</h3>
-            <hr color= #dbd4d4>
-              <ul><li><p>Béton</p></li>
-                <li><p>Plancher en bois...</p></li></ul>
+            <h3 id="brut" class="card-title">Brut</h3>
+              <ul>
+                <li>
+                  <p class="para">Béton</p>
+                </li>
+                <li>
+                  <p class="para">Plancher en bois...</p>
+                </li>
+              </ul>
             </div>
           <% end %>
         </div>
