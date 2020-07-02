@@ -31,5 +31,5 @@ parquet2 = Product.create!(product_type: "Parquet flottant", price_per_square_me
 
 #booking
 
-booking1= Booking.create!(user: gaspar, product: carrelage1, starts_at: "Fri, 03 Jul 2020 09:00:00 UTC +00:00", ends_at: "Fri, 17 Jul 2020 19:00:00 UTC +00:00" , floor_type: "parquet massif", surface_area: 40)
-booking2= Booking.create!(user: gaspar, product: parquet1, starts_at: "Mon, 07 Sep 2020 09:00:00 UTC +00:00", ends_at: 'Fri, 18 Sep 2020 19:00:00 UTC +00:00', floor_type: "carrelage", surface_area: 20)
+booking1= Booking.create!(user: gaspar, product: carrelage1, starts_at: "Fri, 03 Jul 2020 09:00:00 UTC +00:00", ends_at: "Fri, 17 Jul 2020 19:00:00 UTC +00:00" , floor_type: "Parquet massif", surface_area: 40)
+booking2= Booking.create!(user: gaspar, product: parquet1, starts_at: "Mon, 07 Sep 2020 09:00:00 UTC +00:00", ends_at: 'Fri, 18 Sep 2020 19:00:00 UTC +00:00', floor_type: "Carrelage", surface_area: 20)

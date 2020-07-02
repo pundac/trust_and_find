@@ -20,7 +20,7 @@
       </div>
       <div class="mdl-stepper-step <%= @step3 || @step4 || @step5 || @step6 || @step7 ? 'active-step' : 'step-done' %>">
         <div class="mdl-stepper-circle"><span>3</span></div>
-        <div class="mdl-stepper-title font-size-20px"><b>Materiaux</b></div>
+        <div class="mdl-stepper-title font-size-20px"><b>Matériaux</b></div>
         <div class="mdl-stepper-title"><%= @step6 || @step7 ? @booking.product.product_type : params[:new_product] %></div>
         <div class="mdl-stepper-bar-left <%= @step3 || @step4 || @step5 || @step6 || @step7 ? 'mdl-stepper-bar-left-done' : 'mdl-stepper-bar-left-grey' %>"></div>
         <div class="mdl-stepper-bar-right <%= @step3 || @step4 || @step5 || @step6 || @step7 ? 'mdl-stepper-bar-right-done' : 'mdl-stepper-bar-right-grey' %>"></div>
