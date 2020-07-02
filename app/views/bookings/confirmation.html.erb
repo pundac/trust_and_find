@@ -1,37 +1,33 @@
 <%= render 'shared/stepper' %>
+
 <div class="container">
   <div class="row">
-      <%# Devis estimatif %>
-       <div class="card-product card-product-offset w-100 m-3">
-          <img src="<%=@booking.image_product%>"  alt="your floor" >
-          <div class= "card-devis"><strong><%= number_to_euro(@booking.total)%></strong></div>
-        <div class='w-100 m-3 p-3'>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex justify-content-between font-weight-bold h4">
-              <div > Total Devis Estimatif</div>                 
-              <div> <%= number_to_euro(@booking.total)%></div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <div> Coût d'achat</div>
-              <div><%= number_to_euro(@booking.product.price_per_square_meter * @booking.surface_area) %></div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <div> La main d'oeuvre</div>
-              <div><%=number_to_euro(@booking.depose + @booking.labor)%></div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <div>Livraison</div>
-              <div> <%=number_to_euro(50)%> </div> 
-            </li>
-          </ul>
-            <div class = 'text-right w-50 mx-auto mt-3'>
-              <%= link_to "Voir les disponibilités", intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "example_f"  %>
-            </div>
+    <%# Devis estimatif %>
+    <div class="card-product card-product-offset w-100 m-3">
+      <img src="<%=@booking.image_product%>"  alt="your floor" >
+      <div class='w-100 m-3 p-3'>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between font-weight-bold h4">
+            <div > Total Devis Estimatif</div>
+            <div> <%= number_to_euro(@booking.total)%></div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <div> Coût d'achat</div>
+            <div><%= number_to_euro(@booking.product.price_per_square_meter * @booking.surface_area) %></div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <div> Main d'oeuvre</div>
+            <div><%=number_to_euro(@booking.depose + @booking.labor)%></div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <div> Livraison</div>
+            <div> <%=number_to_euro(50)%> </div>
+          </li>
+        </ul>
+        <div class = 'text-right w-50 mx-auto mt-3'>
+          <%= link_to "Voir les disponibilités", intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "example_f"  %>
         </div>
       </div>
-
-     
     </div>
   </div>
-</div>
 </div>
