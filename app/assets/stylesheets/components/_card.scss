@@ -186,3 +186,10 @@ font-size: 40px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 1);
   }
 }
+#retour {
+  width: 30vh;
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
