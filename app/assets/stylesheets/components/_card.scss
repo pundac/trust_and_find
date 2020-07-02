@@ -174,3 +174,15 @@ a:hover {
   margin-left: 30%;
   margin-top: 10%;
 }
+.card-devis {
+display: flex;
+position: absolute;
+font-weight: 800;
+font-family: 'Maven Pro', sans-serif;
+left: 16%;
+color: white;
+font-size: 40px;
+  &:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  }
+}
