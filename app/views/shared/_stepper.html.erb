@@ -37,7 +37,8 @@
         <div class="mdl-stepper-title font-size-20px"><b>Disponibilités</b></div>
         <div class="mdl-stepper-title">
           <% if @step6 || @step7 %>
-            Du <%= @booking.starts_at.strftime("%d/%m/%Y") %> au <%= @booking.ends_at.strftime("%d/%m/%Y") %>
+            Du <%= @booking.starts_at.strftime("%d/%m/%Y") %> <br>
+            Au <%= @booking.ends_at.strftime("%d/%m/%Y") %>
           <% end %>
         </div>
         <div class="mdl-stepper-title"></div>
