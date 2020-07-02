@@ -1,34 +1,44 @@
 <%= render 'shared/stepper' %>
-<div class=" d-flex align-self-start justify-content-center fix-footer ">
-  <div class="card-product ">
-    <img src="<%=@booking.image_product%>" alt="your floor" >
-    <div class="card-product-infos w-100 m-3">
-      <h1 class='title'>Votre récapitulatif</h1>
-      <p>En espérant que notre service vous convient <strong><%= @booking.user.name%> </strong>.</p>
-      <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
-      <p>Vos travaux sont prévus du: </p>
-      <p> <strong><%= @booking.starts_at.strftime("%d/%m/%Y")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y")%></strong></p>
-      <div class="total_pay mt-3">
-        <h2 >Coût total</h2>
-        <h2 class = "mt-3"><strong><%= number_to_euro(@booking.total) %></strong></h2>
-        <% if @booking.state == 'pending' %>
-          <div class="  d-flex justify-content-center mt-3">
-            <a class="pay button_cont" id="pay" rel="nofollow"><span>Payer</span></a>
-          </div>
-          <script src="https://js.stripe.com/v3/"></script>
-          <script>
-            const paymentButton = document.getElementById('pay');
-            paymentButton.addEventListener('click', () => {
-              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-              stripe.redirectToCheckout({
-                sessionId: '<%= @booking.checkout_session_id %>'
+<% if @booking.state == 'pending' %>
+  <div class=" d-flex align-self-start justify-content-center fix-footer ">
+    <div class="card-product ">
+      <img src="<%=@booking.image_product%>" alt="your floor" >
+      <div class="card-product-infos w-100 m-3">
+        <h1 class='title'>Votre récapitulatif</h1>
+        <p>En espérant que notre service vous convienne <strong><%= @booking.user.name%> </strong>.</p>
+        <p>Notre professionnel posera du <strong><%=@booking.product.product_type%></strong></p>
+        <p>Vos travaux sont prévus du: </p>
+        <p> <strong><%= @booking.starts_at.strftime("%d/%m/%Y")%></strong> au <strong><%= @booking.ends_at.strftime("%d/%m/%Y")%></strong></p>
+        <div class="total_pay mt-3">
+          <h2 >Coût total</h2>
+          <h2 class = "mt-3"><strong><%= number_to_euro(@booking.total) %></strong></h2>
+            <div class="  d-flex justify-content-center mt-3">
+              <a class="pay button_cont" id="pay" rel="nofollow"><span>Payer</span></a>
+            </div>
+            <script src="https://js.stripe.com/v3/"></script>
+            <script>
+              const paymentButton = document.getElementById('pay');
+              paymentButton.addEventListener('click', () => {
+                const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+                stripe.redirectToCheckout({
+                  sessionId: '<%= @booking.checkout_session_id %>'
+                });
               });
-            });
-          </script>
-        <% else %>
-          <h2>Merci pour votre confiance !</h2>
-          <%= link_to 'Retour', root_path, class: "example_f" %>
-        <% end %>
+            </script>
+<% else %>
+        <div class=" d-flex align-self-start justify-content-center fix-footer ">
+    <div class="card-product ">
+      <img src="<%=@booking.image_product%>" alt="your floor" >
+      <div class="card-product-infos w-100 m-3">
+        <h1 class='title'>Merci pour votre confiance !</h1>
+        <p>En espérant que votre projet se réalise sans encombre.</p>
+        <p>Notre professionnel du <strong><%=@booking.product.product_type%></strong> sera bientôt au courant de votre demande</p>
+        <div class="total_pay mt-3">
+          <h2 >Coût total</h2>
+          <h2 class = "mt-3"><strong><%= number_to_euro(@booking.total) %></strong></h2>
+          <h3>À bientôt sur Find & Trust</h3>
+          <%= link_to 'Retour', root_path, class: "example_f d-flex justify-content-center mt-3" %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
