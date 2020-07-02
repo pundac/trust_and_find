@@ -7,13 +7,14 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: auto auto;
   align-items: center;
-  border-radius: 15px; 
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 .card-product-infos {
   align-content: center;
   text-align: center;
   align-items: center;
-  
+
 }
 .card-product img {
 height: 100%;
@@ -25,13 +26,13 @@ object-fit: cover;
   font-size: 20px;
   font-weight: bold;
   margin: 0;
-  
+
 }
 .card-product h1 {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  
+
 }
 
 .card-product p {
