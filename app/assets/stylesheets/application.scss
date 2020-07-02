@@ -11,22 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "components/footer";
-@import "components/card_show";
 
-@import "components/body";
-@import "pages/calendar";
-@import "pages/edit";
-@import "pages/login";
-
-
-
-@import "components/stepper";
+@import "flatpickr/dist/flatpickr";
 
 body {
   // background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 40%, rgba(196, 196, 196, 0.5));
   background-color: white;
 }
 
-
-@import "flatpickr/dist/flatpickr";
+.font-size-20px {
+  font-size: 20px !important;
+}

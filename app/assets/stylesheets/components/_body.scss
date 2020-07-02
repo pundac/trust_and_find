@@ -20,9 +20,22 @@ body{
 }
 .little-title {
   font-family: 'Maven Pro', sans-serif;
+  color: white;
+  display: grid;
+  position: absolute;
+  top: 23%;
+  left: 20%;
 }
 .para {
   margin-top: 5px;
   font-size: 20px;
+  font-family: 'Maven Pro', sans-serif;
+}
+#little-carrelage {
+  position: absolute;
+  top: 23%;
+  left: 30%;
+}
+.Price {
   font-family: 'Maven Pro', sans-serif;
 }
