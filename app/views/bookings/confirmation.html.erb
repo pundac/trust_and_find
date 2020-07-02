@@ -3,8 +3,8 @@
   <div class="row">
     <div class="col-12 col-md-9">
       <%# Devis estimatif %>
-      <div class="card-invoice border-light shadow p-3 mt-3 transi">
-        <h2 class="text-justify text-center little-title">Devis Estimatif</h2>
+      <div class="card-invoice border-light shadow p-3 mt-3">
+        <h2 class="text-justify text-center Price">Devis Estimatif</h2>
         <div class="d-flex flex-grow-1 flex-row m-3">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Coût d'achat:</li>
@@ -24,14 +24,14 @@
     <div class="col-12 col-md-3">
       <%# Card CTA %>
       <div class="card-total-cost shadow transi">
-        <h2 class="little-title">Coût total</h2>
+        <h2 class="Price">Coût total</h2>
         <h2><strong><%= number_to_euro(@booking.total)%></strong></h2>
         <%= link_to "Prise de rendez-vous", intervention_schedueles_bookings_path(surface_area: params[:surface_area],product: params[:product], new_product: params[:new_product]), class: "example_f"  %>
       </div>
     </div>
     <div class="col-12 col-md-9">
       <%# Card product %>
-      <div class="card-product card-product-offset w-100 mt-3 transi">
+      <div class="card-product card-product-offset w-100 mt-3">
         <img src="<%=@booking.image_product%>"  alt="your floor" >
         <div class='w-100'>
           <p class="text-center">Type de produit: <strong><%=@booking.product.product_type%></strong></p>
